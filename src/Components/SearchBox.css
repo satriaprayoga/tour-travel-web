@@ -1,0 +1,104 @@
+.search-header{
+  margin-top: 80px;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    width: 100vw;
+    min-height:600px;
+    background: rgb(34,195,128);
+    background: linear-gradient(180deg, rgba(34,195,128,1) 18%, rgba(255,255,255,1) 84%);
+  }
+  
+  
+  
+  .search-title{
+      position: absolute;
+      display: inline-block;
+      align-items: center;
+      text-align: center;
+      justify-items: center;
+      margin-top: -90px;
+      color: #faf0f0;
+  }
+  
+  .search-title p{
+      display:inline-block;
+      border-bottom:1px solid white;
+      padding-bottom:2px;
+      font-size: 24px;
+  }
+  
+  .display-search{
+    align-items: center;
+   
+    color: #ffffff !important;
+  }
+  
+  .search-box{
+    margin-top: 3em;
+    position: absolute;
+    height: 4rem;
+    display: flex;
+    border: none;
+    outline: 0;
+    min-width: 605px;
+    background-color: #ffffff !important;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,.3);
+  }
+  
+  .search-box .input-group-prepend{
+      display: flex;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      
+  }
+  
+  .search-box .btn{
+    border: none;
+    border-radius: 0px;
+    max-width: 100px;
+    justify-content: center;
+    font-size: 30px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: none;
+  }
+  
+  .search-box .btn:hover{
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+   
+  }
+  
+  .search-box .input-group-prepend > .input-group-text{
+    padding: 40px 20px; line-height: 32px;
+    border-radius: 0;
+    background-color: #ffffff !important;
+  }
+  
+  .search-box input{
+    box-sizing: unset;
+    border-radius: 0;
+    border: none;
+    line-height: 4em;
+  }
+  
+  .search-box input:focus{
+    outline: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+        .search-box{
+          min-width: 400px;
+        }
+  }
+  

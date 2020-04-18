@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    min-height: 80px;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+  }
+  
+  .navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+  }
+  
+  .v-divider{
+    height:50px;
+    border-left:1px solid gray;
+   }
+  
+   .navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.14px;
+    line-height: 18px;
+    padding: 1.2em;
+   }
+  
+   .booknow{
+    align-items: center;
+    left: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(203, 32, 39, 1.0);
+    transform: rotate(0deg);
+    opacity: 1.0;
+    margin-right: 15px;
+    transition: none 0.2s ease-in-out;
+   }
+  
+   
+  
+   .signin{
+    color: rgb(57, 128, 194) !important;
+    text-align: center;
+    letter-spacing: -0.26px;
+    line-height: 18.0px;
+   }
+  
+   .createAccount{
+    color: rgb(57, 128, 194) !important;
+    left: -1px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 130, 252, 1.0);
+    transform: rotate(0deg);
+    opacity: 1.0;
+   }
+
+   @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+        .v-divider{
+            display: none;
+        }
+  }
+  

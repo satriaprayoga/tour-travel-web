@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppNavbar from './Layouts/AppNavbar';
+import SearchBox from './Components/SearchBox';
+import { Container, Row, Col, Figure } from 'react-bootstrap';
+import PopularDestination from './Pages/Home/PopularDestination';
+import PopularLandmark from './Pages/Home/PopularLandmark';
+import PackageJumbo from './Pages/Home/PackageJumbo';
+import Testimony from './Pages/Home/Testimony';
+import AppFooter from './Layouts/AppFooter';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppNavbar />
+      <SearchBox />
+      <PopularDestination/>
+      <PopularLandmark/>
+      <PackageJumbo/>
+      <Testimony/>
+      <AppFooter/>
     </div>
   );
 }

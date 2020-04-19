@@ -1,0 +1,90 @@
+[
+    {
+        "destination":"Baluran Sabana Park",
+        "location":"Situbondo, East Java",
+        "packageGroup":"Paket Family",
+        "landmarks":[
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Goa Jepang"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Pantai Balalan"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Teluk Hijau"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Pantai Bama"
+            }
+        ],
+        "packageName":"Paket A",
+        "price":1750000,
+        "minOrder":4,
+        "day":2,
+        "night":1
+    },
+    {
+        "destination":"Baluran Sabana Park",
+        "location":"Situbondo, East Java",
+        "packageGroup":"Paket Family",
+        "landmarks":[
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Goa Jepang"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Pantai Balalan"
+            }
+        ],
+        "packageName":"Paket B",
+        "price":1000000,
+        "minOrder":4,
+        "day":2,
+        "night":1
+    },
+    {
+        "destination":"Baluran Sabana Park",
+        "location":"Situbondo, East Java",
+        "packageGroup":"Paket Hemat",
+        "landmarks":[
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Goa Jepang"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Teluk Hijau"
+            }
+        ],
+        "packageName":"Paket A",
+        "price":500000,
+        "minOrder":2,
+        "day":2,
+        "night":1
+    },
+    {
+        "destination":"Baluran Sabana Park",
+        "location":"Situbondo, East Java",
+        "packageGroup":"Paket Hemat",
+        "landmarks":[
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Pantai Bama"
+            },
+            {
+                "destination":"Baluran Sabana Park",
+                "name":"Teluk Hijau"
+            }
+        ],
+        "packageName":"Paket B",
+        "price":500000,
+        "minOrder":2,
+        "day":2,
+        "night":1
+    }
+]

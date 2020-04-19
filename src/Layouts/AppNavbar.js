@@ -28,7 +28,7 @@ class AppNavbar extends React.Component {
                             <Nav.Link href="#about">About Us</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets" className="booknow">Book Now</Nav.Link>
+                            <Nav.Link href="/booking" className="booknow">Book Now</Nav.Link>
                             <div className="v-divider"> </div>
                             <Nav.Link eventKey={2} href="#signin" className="signin">
                                 Sign In

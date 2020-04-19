@@ -4,9 +4,6 @@ import goaJepang from '../../goaJepang.png';
 import pantaiBalalan from '../../pantaiBalanan.png';
 import telukHijau from '../../telukHijau.png';
 import pantaiBama from '../../pantaiBama.png';
-import bali from '../../bali.png';
-import jogja from '../../jogja.png';
-import papua from '../../papua.png';
 import './PopularLandmark.css';
 
 

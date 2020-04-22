@@ -461,11 +461,11 @@ export const Gallery = () => (
         </div>
     </div>   
 </div>
-<section class="zoom">
+{/* <section class="zoom">
     <img src={mount1} id="layer1" />
     <img src={mount2} id="layer2" />
     <img src={text} id="text" />
-</section>
+</section> */}
 <section class="konten">
 <h1>Make Your Trip Easier</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,

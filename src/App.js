@@ -11,6 +11,7 @@ import AppFooter from './Layouts/AppFooter';
 import BookingPackage from './Pages/Search/BookingPackage';
 import { withRouter, Switch, Router, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
+import Booking from './Pages/Booking/Booking';
 
 class App extends React.Component{
   constructor(props){
@@ -24,6 +25,7 @@ class App extends React.Component{
         <Switch>
               <Route path="/home" component={Home}></Route>
               <Route path="/booking" component={BookingPackage}></Route>
+              <Route path="/booking_confirm" component={Booking}></Route>
               <Route exact path="/" component={Home}/>
         </Switch>
         <AppFooter/>

@@ -6,6 +6,7 @@ import './BookingPackage.css';
 import Firebase from 'firebase';
 import firebaseConfig from '../../Services/MockupService';
 import searchBg from '../../search-bg.png';
+import { withRouter } from 'react-router-dom';
 
 class BookingPackage extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class BookingPackage extends React.Component {
 
         this.loadPackages = this.loadPackages.bind(this);
         this.handleChangeDate=this.handleChangeDate.bind(this);
+        this.gotoConfirm=this.gotoConfirm.bind(this);
     }
 
     handleChangeDate=(date)=>{
@@ -43,6 +45,11 @@ class BookingPackage extends React.Component {
             })
             console.log(this.state.avaliablePacks);
         });
+    }
+
+    gotoConfirm(e){
+        e.preventDefault();
+        this.props.history.push("/booking_confirm");
     }
 
 
@@ -172,7 +179,7 @@ class BookingPackage extends React.Component {
                                                         
                                                     </div>
                                                     <div class="d-flex flex-row-reverse">
-                                                            <div class="mr-1"><Button style={{border:"none",background:"red",borderRadius:"0", width:"120px"}}>Book Now</Button></div>
+                                                            <div class="mr-1"><Button style={{border:"none",background:"red",borderRadius:"0", width:"120px"}} onClick={(e)=>this.gotoConfirm(e)}>Book Now</Button></div>
                                                             <div class="mr-1"><Button style={{border:"none",borderRadius:"0",width:"120px"}}> Details </Button></div>
                                                     </div>
                                                 </div>
@@ -188,4 +195,4 @@ class BookingPackage extends React.Component {
     }
 }
 
-export default BookingPackage;
+export default withRouter(BookingPackage);

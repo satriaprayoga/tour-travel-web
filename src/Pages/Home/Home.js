@@ -5,6 +5,7 @@ import PopularLandmark from './PopularLandmark';
 import PopularDestination from './PopularDestination';
 import PackageJumbo from './PackageJumbo';
 import Testimony from './Testimony';
+import { Gallery } from './Gallery';
 
 class Home extends React.Component{
     constructor(props){
@@ -15,9 +16,8 @@ class Home extends React.Component{
         return(
             <div>
                 <SearchBox />
-        <PopularDestination/>
-        <PopularLandmark/>
-        <PackageJumbo/>
+        <Gallery/>
+        
         <Testimony/>
             </div>
         )

@@ -18,7 +18,9 @@
     "react-grid-gallery": "^0.5.5",
     "react-icons": "^3.9.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-stepzilla": "^6.0.2",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

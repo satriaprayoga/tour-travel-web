@@ -1,9 +1,9 @@
 .booking-header{
     margin-top: 80px;
     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height:600px;
     background: rgb(34,195,128);
     background: linear-gradient(180deg, rgba(34,195,128,1) 18%, rgba(255,255,255,1) 84%);

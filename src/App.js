@@ -12,6 +12,9 @@ import BookingPackage from './Pages/Search/BookingPackage';
 import { withRouter, Switch, Router, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Booking from './Pages/Booking/Booking';
+import BookingNavbar from './Layouts/Booking/BookingNavbar';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 class App extends React.Component{
   constructor(props){
@@ -24,6 +27,8 @@ class App extends React.Component{
         <AppNavbar />
         <Switch>
               <Route path="/home" component={Home}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/register" component={Register}></Route>
               <Route path="/booking" component={BookingPackage}></Route>
               <Route path="/booking_confirm" component={Booking}></Route>
               <Route exact path="/" component={Home}/>

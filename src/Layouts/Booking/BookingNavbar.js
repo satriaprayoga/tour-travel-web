@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import logo from '../logo.jpeg';//'../logo.svg';
-import './AppNavbar.css';
+import logo from '../../logo.jpeg';//'../logo.svg';
+import './BookingNavbar.css';
 
-class AppNavbar extends React.Component {
+class BookingNavbar extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -21,10 +21,10 @@ class AppNavbar extends React.Component {
             ];
         } else {
             navLinks = [
-                <Nav.Link eventKey={2} href="/login" className="signin">
+                <Nav.Link eventKey={2} href="#signin" className="signin">
                     Sign In
                 </Nav.Link>,
-                <Nav.Link eventKey={3} href="/register" className="createAccount">
+                <Nav.Link eventKey={3} href="#createAccount" className="createAccount">
                     Create Account
                 </Nav.Link>
             ];
@@ -62,4 +62,4 @@ class AppNavbar extends React.Component {
         )
     }
 }
-export default AppNavbar;
+export default BookingNavbar;

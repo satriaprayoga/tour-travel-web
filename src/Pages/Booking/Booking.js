@@ -14,12 +14,16 @@ class Booking extends React.Component {
         const steps = [
             { name: "Step 1", component: <PersonalInfo /> },
             { name: "Step 2", component: <PaymentInfo /> },
-            { name: "Step 3", component: <PaymentInfo /> },
-            { name: "Step 4", component: <PaymentInfo /> }
+            { name: "Step 3", component: <PaymentInfo /> }
         ]
         return (
             <div className='step-progress'>
-            <StepZilla steps={steps} stepsNavigation={false} prevBtnOnLastStep={false} startAtStep={0} />
+            <StepZilla steps={steps} 
+                       stepsNavigation={false} 
+                       prevBtnOnLastStep={false} 
+                       startAtStep={0} 
+                       nextButtonCls="btn nextButton"
+                       backButtonCls="btn backButton"/>
         </div>
             
         )

@@ -107,7 +107,8 @@ ol.progtrckr li.progtrckr-todo {
 .footer-buttons {
     display: flex;
     position: relative;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    padding: 20px;
 }
   
   ol.progtrckr li span {
@@ -193,4 +194,18 @@ ol.progtrckr li.progtrckr-todo {
   
   ol.progtrckr li.progtrckr-done:hover:before {
     color: #333;
+  }
+
+  .nextButton{
+    background:none;
+    border-radius: 0px;
+    border:1px solid #3d71e6;
+    width: 100px;
+  }
+
+  .backButton{
+    background:none;
+    border-radius: 0px;
+    border:1px solid #ff4500;
+    width: 100px;
   }

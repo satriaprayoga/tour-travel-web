@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="370px" viewBox="0 0 750 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>logo-big</title>
+    <desc>Created with Sketch.</desc>
+    <g id="logo-big" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="normal">
+        <g id="logobesar" transform="translate(-107.000000, -46.000000)" fill="#FFFFFF">
+            <text id="􀈠" font-family="SFCompactDisplay-Regular, SF Compact Display" font-size="180" letter-spacing="1.53">
+                <tspan x="248.364883" y="206">􀈠</tspan>
+            </text>
+            <text id="􀓨" transform="translate(219.500000, 220.000000) rotate(143.000000) translate(-219.500000, -220.000000) " font-family="SFCompactDisplay-Regular, SF Compact Display" font-size="200" letter-spacing="1.7">
+                <tspan x="103.708594" y="251">􀓨</tspan>
+            </text>
+            <text id="nfoSys" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="150" letter-spacing="1.275">
+                <tspan x="339.753125" y="329">nfoSys</tspan>
+            </text>
+            <text id="Tour-&amp;-Travel" font-family="Helvetica" font-size="48" letter-spacing="0.408">
+                <tspan x="373.437844" y="378">Tour &amp; Travel</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

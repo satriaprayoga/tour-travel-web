@@ -6,7 +6,8 @@ import PopularDestination from './PopularDestination';
 import PackageJumbo from './PackageJumbo';
 import Testimony from './Testimony';
 import { Gallery } from './Gallery';
-
+import Testimonial from './testimonial/Testimonial';
+import Testimoni from './Testimoni';
 class Home extends React.Component{
     constructor(props){
         super(props);
@@ -18,7 +19,7 @@ class Home extends React.Component{
                 <SearchBox />
         <Gallery/>
         
-        <Testimony/>
+        <Testimoni/>
             </div>
         )
     }

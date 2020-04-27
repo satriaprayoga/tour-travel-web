@@ -15,6 +15,7 @@ import Booking from './Pages/Booking/Booking';
 import BookingNavbar from './Layouts/Booking/BookingNavbar';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import Footer from './Pages/Home/Footer';
 
 class App extends React.Component{
   constructor(props){
@@ -33,7 +34,7 @@ class App extends React.Component{
               <Route path="/booking_confirm" component={Booking}></Route>
               <Route exact path="/" component={Home}/>
         </Switch>
-        <AppFooter/>
+        <Footer/>
       </div>
     );
   }

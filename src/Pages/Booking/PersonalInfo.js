@@ -5,8 +5,41 @@ import { Container, Row, Card, Col } from 'react-bootstrap';
 class PersonalInfo extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            fullName:props.getStore().fullName,
+            email:props.getStore().email,
+            phone:props.getStore().phone,
+            country:'',
+            province:'',
+            city:'',
+            billingAddress:props.getStore().billingAddress
+
+        }
+        this._validateOnDemand=true
         this.handleMount = this.handleMount.bind(this);
+
+        this._validationCheck=this._validationCheck.bind(this);
+        this.isValidated=this.isValidated.bind(this);
     }
+
+    _validationCheck(){
+
+    }
+
+    isValidated(){
+
+    }
+
+
+    _grabUserInput(){
+        return {
+            fullName:this.refs.fullName.value,
+            email:this.refs.email.value,
+            phone:this.refs.phone.value,
+            billingAddress:this.refs.billingAddress.value
+        }
+    }
+
     handleMount() {
         let footer = document.querySelector(".app-footer");
         footer.style['margin-top'] = "30em";
@@ -49,17 +82,34 @@ class PersonalInfo extends React.Component {
                                             </div>
                                             <div style={{ paddingLeft: "20px" }}>
                                                 <label>Full Name</label>
-                                                <input type="text" className="form-control"></input>
+                                                <input type="text" 
+                                                       ref="fullName"
+                                                       className="form-control" 
+                                                       name="fullName"
+                                                       defaultValue={this.state.fullName}
+                                                       required></input>
                                             </div>
                                             <div className="form-row" style={{ paddingLeft: "20px" }}>
                                                 <Col md={6} className="form-group">
                                                     <label className="form-label">Email</label>
-                                                    <input className="form-control" type="text" placeholder="Adult" />
+                                                    <input className="form-control" 
+                                                            type="email" 
+                                                            placeholder="email address"
+                                                            ref="email"
+                                                            name="email"
+                                                            defaultValue={this.state.email} 
+                                                            required/>
 
                                                 </Col>
                                                 <Col md={6} className="form-group">
                                                     <label className="form-label">Phone</label>
-                                                    <input className="form-control" type="text" placeholder="Children" />
+                                                    <input className="form-control" 
+                                                           type="text" 
+                                                           placeholder="Phone Number"
+                                                           ref="phone"
+                                                           name="phone"
+                                                           defaultValue={this.state.phone} 
+                                                           required/>
 
                                                 </Col>
                                             </div>

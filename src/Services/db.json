@@ -1,0 +1,7 @@
+{
+    "testimonial": [
+        { "id": 1, "name":"John Doe", "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "url": "https://placeimg.com/100/100/people/grayscale"},
+        { "id": 2, "name":"Elsa", "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.", "url": "https://placeimg.com/100/100/people/sepia"},
+        { "id": 3, "name":"Peter Stanbridge", "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "url": "https://placeimg.com/100/100/people"}
+    ]
+  }

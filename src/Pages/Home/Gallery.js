@@ -466,11 +466,11 @@ export const Gallery = () => (
     <img src={mount2} id="layer2" />
     <img src={text} id="text" />
 </section> */}
-<section class="konten">
+{/* <section class="konten">
 <h1>Make Your Trip Easier</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</section>
+</section> */}
 
 </Styles>
 )

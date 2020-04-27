@@ -106,6 +106,10 @@
     font-size: 12px;
     text-align: center;
 }
+
+.footer h2{
+    border-bottom: none;
+}
 @media (max-width: 1119px)
 {
     .footeritems

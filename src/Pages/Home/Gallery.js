@@ -349,57 +349,49 @@ export const Gallery = () => (
 			<div class="img">
 				<img src={satu} alt=" "/>
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Komodo Island</h3></a>
 			</div>
 			</div>
 			<div class="img">
 				<img src={dua} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Ambon</h3></a>
 			</div>
 			</div>
 			<div class="img">
 				<img src={tiga} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Baluran</h3></a>
 			</div>
 			</div>
 			<div class="img">
 				<img src={empat} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Lombok</h3></a>
 			</div>
 			</div>
             <div class="img">
 				<img src={lima} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Rancabungur</h3></a>
 			</div>
 			</div>
             <div class="img">
 				<img src={enam} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Morotai</h3></a>
 			</div>
 			</div>
             <div class="img">
 				<img src={tujuh} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Bali</h3></a>
 			</div>
 			</div>
             <div class="img">
 				<img src={delapan} />
                 <div class="text">
-                <a href="/"><h3>AAAAAAAAAAAA</h3>
-                <p>XXXXXXXXXXXXXXXXXXXX</p></a>
+                <a href="/"><h3>Jogja</h3></a>
 			</div>
 			</div>
 		</div>
@@ -418,7 +410,7 @@ export const Gallery = () => (
         </div>
         <div class="content">
             <div>
-                <h3>Design</h3>
+                <h3>Goa Jepang</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -430,7 +422,7 @@ export const Gallery = () => (
         </div>
         <div class="content">
             <div>
-                <h3>Code</h3>
+                <h3 style={{textOverflow:'none'}}>Pantai Balalan</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -442,7 +434,7 @@ export const Gallery = () => (
         </div>
         <div class="content">
             <div>
-                <h3>Launch</h3>
+                <h3>Teluk Hijau</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -454,7 +446,7 @@ export const Gallery = () => (
         </div>
         <div class="content">
             <div>
-                <h3>Earn</h3>
+                <h3>Pantai Bama</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>

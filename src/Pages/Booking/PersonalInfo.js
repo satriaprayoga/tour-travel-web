@@ -41,8 +41,7 @@ class PersonalInfo extends React.Component {
     }
 
     handleMount() {
-        let footer = document.querySelector(".app-footer");
-        footer.style['margin-top'] = "30em";
+       
         let footerButton = document.querySelector(".footer-buttons");
         footerButton.style['margin-top'] = "-80px";
         footerButton.style['margin-right'] = "50px";

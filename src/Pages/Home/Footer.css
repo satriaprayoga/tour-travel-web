@@ -123,4 +123,11 @@
     {
         width: 100%;
     }
+
+    .footersatu
+    {
+        height: 100px;
+        width: 50%;
+        margin-bottom: 10px;
+    }
 }

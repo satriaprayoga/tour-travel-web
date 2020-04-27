@@ -9,6 +9,12 @@
     background: rgb(34,195,128);
     background: linear-gradient(180deg, rgba(34,195,128,1) 18%, rgba(255,255,255,1) 84%);
   }
+
+  .search-header img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
   
   
   
@@ -98,7 +104,12 @@
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
         .search-box{
-          min-width: 400px;
+          min-width: 371px;
+          margin-top: 90px;
+        }
+
+        .search-title p{
+          border-bottom: none;
         }
   }
   

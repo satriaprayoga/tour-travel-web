@@ -1,0 +1,260 @@
+.pl-body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub
+{
+    text-align: center;
+    margin: 30px 0;
+    padding: 0;
+    font-weight: 600;
+    color: white;
+}
+.sub-text
+{
+    text-align: center;
+    margin: auto;
+    margin-top: -25px;
+    padding: 0;
+    font-size: 14px;
+    width: 60%;
+    color: white;   
+}
+.garis
+{
+    padding-top: 10px;
+    border-bottom: 5px solid #32a3b1;
+    width: 30%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+/* view */
+.pl-container
+{
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    margin: 30px auto 0;
+    background: #0e0e0e;
+}
+
+/* back over */
+.pl-container .pl-box
+{
+    position: relative;
+    width: calc(300px - 20px);
+    height: calc(300px - 20px);
+    background: #0e0e0e;
+    float: left;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+}
+
+/* garis in */
+.pl-container .pl-box:before
+{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scaleX(0);
+    opacity: 0;
+    z-index: 1;
+}
+.pl-container .pl-box:hover:before
+{
+    transform: scaleX(1);
+    opacity: 1;
+}
+.pl-container .pl-box:after
+{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transform: scaleY(0);
+    opacity: 0;
+    z-index: 1;
+}
+.pl-container .pl-box:hover:after
+{
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.pl-container .pl-box .pl-imgBox
+{
+    position: relative;
+}
+
+.pl-container .pl-box .pl-imgBox .pl-foto
+{
+    width: 100%;
+    transition: 0.5s;
+    opacity: 90%;
+}
+
+.pl-container .pl-box:hover .pl-imgBox .pl-foto
+{
+    opacity: .2;
+    transform: scale(1.2);
+}
+
+.pl-container .pl-box .pl-content
+{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+/* title */
+.pl-container .pl-box .pl-content .pl-title
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: white;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 20px;
+    transform: translateY(-20px);
+    /* opacity: 0;
+    visibility: hidden; */
+}
+.pl-container .pl-box .pl-content .pl-subtitle
+{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #32a3b1;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 16px;
+    transform: translateY(-25px);
+}
+.pl-container .pl-box .pl-content .pl-tags-land,
+.pl-container .pl-box .pl-content .pl-desc
+{
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translateY(100px);
+    opacity: 0;
+    visibility: hidden;
+}
+.pl-container .pl-box:hover .pl-content .pl-tags-land,
+.pl-container .pl-box:hover .pl-content .pl-desc
+{
+    transform: translateY(-10px);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+/* screen */
+@media (max-width: 1200px)
+{
+    .pl-container .pl-box
+    {
+        margin: 5px;
+    }
+}
+@media (max-width: 1159px)
+{
+    .pl-container
+    {
+        width: 900px;
+        height: 580px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 870px)
+{
+    .pl-container
+    {
+        width: 600px;
+        height: 870px;
+    }
+}
+
+@media (max-width: 669px)
+{
+    .sub
+    {
+        font-size: 36px;
+    }
+    .sub-text
+    {
+        width: 60%;   
+    }
+}
+@media (max-width: 580px)
+{
+    .sub
+    {
+        font-size: 32px;
+    }
+    .sub-text
+    {
+        width: 80%;
+        font-size: 12px;   
+    }
+    .pl-container
+    {
+        width: 500px;
+        height: 756px;
+    }
+    .pl-container .pl-box
+    {
+        width: 248px;
+        height: 250px;
+        margin: 1px;
+    }
+    .pl-container .pl-box .pl-content .pl-title
+    {
+        transform: translateY(-10px); 
+    }
+    .pl-container .pl-box .pl-content .pl-subtitle
+    {
+        transform: translateY(-15px); 
+    }
+}
+@media (max-width: 524px)
+{
+    .pd-card .pd-poster::before
+    {
+        bottom: -85px;
+    }
+    .pd-details
+    {
+        bottom: -180px;
+    }
+    .pd-card:hover .pd-details
+    {
+        bottom: -50px;
+    }
+}

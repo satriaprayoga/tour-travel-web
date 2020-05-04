@@ -1,28 +1,20 @@
-import React from 'react';
-import './Home.css';
-import SearchBox from '../../Components/SearchBox';
-import PopularLandmark from './PopularLandmark';
-import PopularDestination from './PopularDestination';
-import PackageJumbo from './PackageJumbo';
-import Testimony from './Testimony';
-import { Gallery } from './Gallery';
-import Testimonial from './testimonial/Testimonial';
-import Testimoni from './Testimoni';
-class Home extends React.Component{
-    constructor(props){
-        super(props);
-    }
+import React, { Component, Fragment} from 'react';
+//import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
-    render(){
-        return(
-            <div>
-                <SearchBox />
-        <Gallery/>
-        
-        <Testimoni/>
-            </div>
-        )
-    }
-}
+import Header from '../../components/Header';
+import TabComponent from '../../components/TabComponent';
+import Footer from '../../components/Footer';
 
-export default Home;
+class Home extends Component {
+    render() {
+      return (
+        <Fragment>
+          <Header />
+          <TabComponent />
+          <Footer />
+        </Fragment>
+      );
+    }
+  }
+  
+  export default Home;

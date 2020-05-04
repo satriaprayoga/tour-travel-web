@@ -1,0 +1,249 @@
+.pk-body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    min-height: 100vh;
+    margin-top: -30px;
+}
+.sub
+{
+    text-align: center;
+    margin: 30px 0;
+    padding: 0;
+    font-weight: 600;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sub-text
+{
+    text-align: center;
+    margin: auto;
+    margin-top: -25px;
+    padding: 0;
+    font-size: 14px;
+    width: 60%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+.garis
+{
+    padding-top: 10px;
+    border-bottom: 5px solid #32a3b1;
+    width: 30%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.pk-container
+{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.pk-container .pk-card
+{
+    position: relative;
+    height: 250px;
+    background: linear-gradient(52deg, rgba(14,14,14,1) 0%, rgba(50,163,177,1) 100%);
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+}
+.pk-container .pk-card .pk-imgBx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.pk-container .pk-card:hover .pk-imgBx
+{
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #32a3b1;
+}
+
+.pk-container .pk-card .pk-imgBx:before
+{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    color: rgba(255,255,255,.05);
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* icon */
+.pk-container .pk-card .pk-imgBx .pk-icon
+{
+    color: white;
+    font-size: 72px;
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.pk-container .pk-card:hover .pk-imgBx .pk-icon
+{
+    max-width: 75px;
+}
+
+.pk-container .pk-card .pk-content
+{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.pk-container .pk-card .pk-content .pk-paket
+{
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+.pk-container .pk-card .pk-content .pk-malam
+{
+    margin-top: -5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.pk-container .pk-card .pk-content .pk-start
+{
+    font-size: 14px;
+    font-weight: 600;
+}
+.pk-container .pk-card .pk-content .pk-harga
+{
+    margin-top: -10px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.pk-container .pk-card .pk-content .pk-orang
+{
+    margin-top: -8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.pk-container .pk-card .pk-content .pk-desc
+{
+    margin-top: -5px;
+    font-size: 14px;
+}
+
+.pk-container .pk-card .pk-content a
+{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #32a3b1;
+    text-decoration: none;
+    color: white;
+}
+.pk-container .pk-card .pk-content a:hover
+{
+    background: #227b96;
+}
+
+/* screen */
+@media (max-width: 992px)
+{
+    .pk-container
+    {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pk-container .card
+    {
+        width: 400px;
+    }
+}
+
+@media (max-width: 878px)
+{
+    .pk-container .pk-card
+    {
+        width: 400px;
+        flex-direction: column;
+        height: auto;
+    }
+    .pk-container .pk-card .pk-content
+    {
+        position: relative;
+        width: 100%;
+    }
+    .pk-container .pk-card .pk-imgBx
+    {
+        position: relative;
+    }
+    .pk-container .pk-card .pk-imgBx,
+    .pk-container .pk-card:hover .pk-imgBx
+    {
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .pk-container .pk-card .pk-imgBx,
+    .pk-container .pk-card:hover .pk-imgBx
+    {
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .pk-container .pk-card .pk-imgBx .pk-icon,
+    .pk-container .pk-card:hover .pk-imgBx .pk-icon
+    {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 669px)
+{
+    .sub
+    {
+        font-size: 36px;
+    }
+    .sub-text
+    {
+        width: 60%;   
+    }
+}
+@media (max-width: 580px)
+{
+    .sub
+    {
+        font-size: 32px;
+    }
+    .sub-text
+    {
+        width: 80%;
+        font-size: 12px;   
+    }
+}

@@ -1,0 +1,61 @@
+/* overflow-x: hidden; */
+.tabs
+{
+    background: #0e0e0e;
+    padding-top: 1rem;
+}
+.tabs-container
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    list-style: none;
+    margin: 0 12%;
+}
+
+.tabs-box
+{
+    color: grey;
+    cursor: pointer;
+}
+.tabs-box:hover
+{
+    color: white;
+}
+
+/* Popular Destination */
+.tab-icon-pd
+{
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Popular Landmark */
+.tab-icon-pl
+{
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Popular Package */
+.tab-icon-pp
+{
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Popular Review */
+.tab-icon-pr
+{
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Active Tab */
+.active
+{
+    border-bottom: 5px solid #32a3b1;
+}

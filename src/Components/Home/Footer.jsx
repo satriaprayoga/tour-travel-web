@@ -9,7 +9,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import footerlogo from "../assets/logobig.png"
+import footerlogo from "../../assets/logobig.png"
 
 //style
 import './Footer.css';

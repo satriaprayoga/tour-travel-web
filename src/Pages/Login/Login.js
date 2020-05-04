@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import logo from '../../logo-trans.png'
+import logo from '../../assets/logobig.png'
 
 class Login extends React.Component{
     constructor(props){
@@ -18,27 +18,26 @@ class Login extends React.Component{
     render(){
        return(
         <div className="container-login">
+             
         <div className="wrap-login">
+        <div className="login-top">
+                        <img className="login-logo" src={logo} />
+                    </div>
             <form className="login-form">
-                <span className="login-form-title">Login</span>
-                <div style={{paddingTop:'31px',paddingBottom:'9px'}}>
-                    <span className="txt1">Email</span>
-                </div>
+                <span className="txt1">Email</span>
                 <div className="wrap-input">
                     <input type="email" className="input" name="email"/>
                 </div>
-                <div style={{paddingTop:'31px',paddingBottom:'9px'}}>
-                    <span className="txt1">Password</span>
-                </div>
+                <span className="txt1">Password</span>
                 <div className="wrap-input">
                     <input type="password" className="input" name="password"/>
                 </div>
                 <div className="container-login-form-btn">
                     <button className="login-form-btn">Sign In</button>
                 </div>
-                <div style={{width:'100%',textAlign:'center', paddingTop:'55px'}}>
-                    <span style={{fontSize:'16px',lineHeight:'1.5',color:'#999999'}}>Not a member?</span>
-                    <a href="#signupt" style={{fontSize:'16px',lineHeight:'1.5',color:'#999999',borderBottom:'1px solid #999999'}}> Sign Up</a>
+                <div style={{width:'100%',textAlign:'center'}}>
+                    <span style={{fontSize:'16px',lineHeight:'1.5',color:'#fff9f9'}}>Not a member?</span>
+                    <a href="#signupt" style={{fontSize:'16px',lineHeight:'1.5',color:'#fff9f9',borderBottom:'1px solid #999999'}}> Sign Up</a>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { InputGroup, FormControl, Button } from 'react-bootstrap';
-import logo from '../assets/logobig.png';
+import logo from '../../assets/logobig.png';
 import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import './Header.css';
@@ -12,7 +12,7 @@ class Header extends Component {
                 <div className="h-container">
                     <div className="h-top">
                         <img className="h-logo" src={logo} />
-                        <Link className="signIn-btn">Sign In</Link>
+                        <Link className="signIn-btn" to="/login">Sign In</Link>
                     </div>
                     <div className="h-content">
                         <h1 className="h-title">It's Time To Travel</h1>

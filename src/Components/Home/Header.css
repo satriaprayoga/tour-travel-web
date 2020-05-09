@@ -32,6 +32,7 @@
 
 .h-top
 {
+    display: flex;
     position: relative;
     height: 10rem;
     z-index: 1;
@@ -45,6 +46,31 @@
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.h-auth{
+    right: 0;
+    margin: 1.125rem 3% 0;
+    padding: 0.4375rem 1.0625rem;
+    position: absolute;
+}
+
+.dropdown-btn{
+    right: 0;
+    margin: 1.125rem 3% 0;
+    padding: 0.4375rem 1.0625rem;
+    position: absolute;
+    translate: transform(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-btn span{
+    text-align: center;
+    padding: 1.5rem;
+    line-height: normal;
 }
 
 .signIn-btn

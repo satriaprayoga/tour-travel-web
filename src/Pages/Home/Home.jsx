@@ -9,7 +9,7 @@ class Home extends Component {
     render() {
       return (
         <Fragment>
-           <Header/>
+           <Header isAuthenticated={false}/>
           <TabComponent />
         </Fragment>
       );

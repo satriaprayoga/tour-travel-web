@@ -1,0 +1,521 @@
+.searchpackage-container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)),
+    url('../../assets/Beautifulsea.jpg') no-repeat center center/cover;
+    padding-bottom: 0rem;
+}
+
+.search-container{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-container-form{
+    
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.searchpackage-top
+{
+    position: relative;
+    height: 10rem;
+    z-index: 1;
+}
+
+.searchpackage-title-large{
+    font-size: 215px;
+    font-weight: 900;
+    color: #fdaa27;
+    opacity: .34;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: .75;
+}
+
+.searchpackage-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 72px;
+    font-weight: 400;
+    color: #fff !important;
+    text-align: center;
+}
+
+.searchpackage-search{
+    position: relative;
+    width: 100%;
+    margin-top: 5.5rem;
+    z-index: 0;
+    padding-bottom: 0.5rem;
+}
+
+.find_form {
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.find_item:first-child {
+    width: 23.413%
+}
+
+.find_item:nth-child(2) {
+    width: 23.413%
+}
+
+.find_item:nth-child(3) {
+    width: 23.413%
+}
+
+.find_item:nth-child(4) {
+    width: 10.122%
+}
+.find_item:nth-child(5) {
+    width: 10.122%
+}
+
+.find_item div {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+
+.find_input {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 52px;
+    border: 0;
+    background: #333333;
+}
+
+.find_input_date{
+    width: 100%;
+    height: 56px;
+    outline: none;
+    color: rgb(37, 15, 15);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 52px;
+    border: 0;
+    background: #333333;
+}
+
+.react-datepicker {
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.react-datepicker__header {
+    text-align: center;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 8px;
+    position: relative;
+}
+
+.react-datepicker__day:hover{
+    border-radius: 0;
+    background-color: #130101;
+    color: #fff;
+}
+
+.react-datepicker__day--selected{
+    border-radius: 0;
+}
+
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before, .react-datepicker__month-year-read-view--down-arrow::before {
+    border-bottom: none;
+    border-top-color: #fff;
+}
+
+.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
+    bottom: 0;
+    margin-bottom: -8px;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before, .react-datepicker__month-year-read-view--down-arrow::before {
+    box-sizing: content-box;
+    position: absolute;
+    border: 8px solid transparent;
+    height: 0;
+    width: 1px;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
+    margin-left: -8px;
+    position: absolute;
+}
+
+.find_item div {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 7px;
+}
+.react-datepicker__triangle {
+    position: absolute;
+    left: 50px;
+}
+
+.find_select {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    border: 0;
+    background: #333333;
+}
+
+.find_button{
+    width: 14.048%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 52px;
+    padding-left: 46px;
+    padding-right: 46px;
+    background: #fe435b!important;
+    -webkit-transform: translateY(14px);
+    -moz-transform: translateY(14px);
+    -ms-transform: translateY(14px);
+    -o-transform: translateY(14px);
+    transform: translateY(14px);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchpackage-search-title{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center !important;
+}
+
+.searchpackage-logo
+{
+    width: 10rem;
+    height: 4.512rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container
+{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    
+}
+
+.searchpackage-form-container{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.searchpackageform-container
+{
+    display: flex;
+    align-items: center!important;
+    flex-flow: row wrap;
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    width: 80rem;
+    height: 100%;
+    padding: 1.41rem;
+    color: white;
+}
+
+.searchpackageform-container label{
+    top: 0.625rem;
+    left: 1.25rem;
+    pointer-events: none;
+    color: #8a8a8a;
+    font-size: 1rem;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    margin: 5px 10px 5px 0;
+}
+.searchpackageform-input-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0.2rem;
+}
+.searchpackageform-input
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    width: 10rem;
+}
+.searchpackageform-select
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    padding: 0 1.25rem 0;
+    width: 20rem;
+}
+form div label
+{
+    position: absolute;
+    top: 0.625rem;
+    left: 1.25rem;
+    pointer-events: none;
+    color: #8a8a8a;
+    font-size: 1rem;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+form div 
+{
+    position: relative;
+}
+input:focus ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+}
+input:focus
+{
+    outline: none;
+}
+/* input ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+} */
+
+.searchpackageform-input-error
+{
+    border-bottom: 1px solid tomato;
+}
+
+.searchpackageform-btn
+{
+    color: white;
+    background: #32a3b1;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.125rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.signupform-btn
+{
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.125rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.searchpackageform-checkbox
+{
+    margin-left: 0.5rem;
+    padding-left: 1.875rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: #999999;
+    cursor: pointer;
+}
+.searchpackageform-checkbox input
+{
+    display: none;
+}
+.searchpackageform-checkbox .checkmark
+{
+    display: inline-block;
+    background: #454545;
+    width: 1.1rem;
+    height: 1.1rem;
+    left: 0;
+    top: 0;
+    border-radius: 0.1rem;
+    position: absolute;
+}
+.searchpackageform-checkbox input:checked + .checkmark::after
+{
+    content: '';
+    position: absolute;
+    height: 0.25rem;
+    width: 0.625rem;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 25%;
+    left: 21%;
+    transform: rotate(-45deg);
+}
+.searchpackageform-help
+{
+    text-decoration: none;
+    color: #828282;
+    margin-left: 6.6rem;
+    font-size: 0.9rem;
+}
+.searchpackageform-help:hover
+{
+    color: #828282;
+}
+
+/* .searchpackageform-bottom .searchpackageform-fblogo
+{
+    width: 1.5625rem;
+    height: 1.5rem;
+    margin: 0.625rem 0.625rem -0.4375rem 0;
+    color: #4267B2;
+}
+.searchpackageform-fb-text
+{
+    color: #828282;
+    font-size: 0.9rem;
+} */
+.searchpackageform-bottom
+{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.searchpackageform-signup
+{
+    color: #999999;
+    font-size: 14px;
+}
+.searchpackageform-signup-text
+{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.searchpackageform-signup-text:hover
+{
+    color: white;
+}
+
+.searchpackageform-error-text
+{
+    color: tomato;
+    font-size: 12px;
+}
+
+@media (max-width: 524px)
+{
+    .searchpackageform-container
+    {
+        width: 25rem;
+        height: 35rem;
+        padding: 3rem;
+    }
+    .searchpackageform-help
+    {
+        margin-left: 5rem;
+       
+    }
+}
+
+@media (max-width: 405px)
+{
+    .searchpackageform-container
+    {
+        width: 22rem;
+        height: 32rem;
+        padding: 2rem;
+    }
+    .searchpackageform-help
+    {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 362px)
+{
+    .searchpackageform-container
+    {
+        width: 20rem;
+        height: 30rem;
+        padding: 1.5rem;
+    }
+    .searchpackageform-help
+    {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 323px)
+{
+    .searchpackageform-container
+    {
+        width: 18rem;
+        height: 28.75rem;
+        padding: 1rem;
+    }
+    .searchpackageform-help
+    {
+        margin-left: 2rem;
+    }
+}

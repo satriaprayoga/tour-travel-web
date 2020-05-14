@@ -43,8 +43,8 @@ class Footer extends Component {
                 <h2 className="footerdua">Useful Links</h2>
                 <div className="footerborder"></div>
                 <div className="footerul">
-                    <a href =""><li>Book Now</li></a>
-                    <a href =""><li>Sign In</li></a>
+                    <a href ="/searchPackages"><li>Book Now</li></a>
+                    <a href ="/login"><li>Sign In</li></a>
                     <a href =""><li>About Us</li></a>
                     <a href =""><li>FAQ</li></a>
                 </div>

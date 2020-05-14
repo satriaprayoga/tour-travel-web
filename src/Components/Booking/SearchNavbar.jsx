@@ -24,13 +24,11 @@ class SearchNavbar extends React.Component{
         } else {
             navLinks = [
                 <Link href="/login" className="signin-button">Sign In</Link>,
-                    <Link href="/register" className="register-button">Sign Up</Link>
-               
             ];
         }
         return (
             <header>
-                <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" fixed="top">
+                <Navbar collapseOnSelect expand="lg" fixed="top">
                     <Navbar.Brand href="/">
                         <img src={logo}
                             width="183"
@@ -63,7 +61,7 @@ class SearchNavbar extends React.Component{
                         <Button className="find-button">Find</Button>
                         
                     </div>
-                    <div className="v-divider"></div>
+                   
                     <Nav>
                     {navLinks}
                     </Nav>

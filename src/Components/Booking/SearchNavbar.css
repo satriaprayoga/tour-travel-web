@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     min-height: 80px;
-    background: #333333;
+    background: none;/*radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));*/
     border-bottom: 0px !important;
   }
   

@@ -1,0 +1,88 @@
+.search-element-container{
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+}
+
+.search-element-inner{
+    width: 100%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.search-element-item{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.search-element-item-img{
+    width: 300px;
+    height: 100px;
+    display: inline-block
+}
+
+.search-element-item-name
+{
+    margin: 10px 0;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.search-element-item-badge{
+    padding: 1.0rem 0 0 0;
+    display: block;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+
+.search-element-item-destination
+{
+    
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: lighter;
+    
+}
+
+.search-element-item-price
+{
+    
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: 300;
+    
+}
+
+.search-element-item p
+{
+    
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: lighter;
+    
+}
+
+.search-element-button-item{
+    display: flex;
+}
+
+.search-element-button-book{
+    margin-right: .25rem!important;
+    border: none;
+    border-radius: 0px;
+    background-color: #aa5252;
+    width: 110px;
+}
+
+.search-element-button-detail{
+    margin-right: .25rem!important;
+    border: none;
+    border-radius: 0px;
+    background-color: #5269aa;
+    width: 110px;
+}

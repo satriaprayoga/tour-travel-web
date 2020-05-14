@@ -1,0 +1,141 @@
+.navbar {
+    display: flex;
+    min-height: 80px;
+    background: #333333;
+    border-bottom: 0px !important;
+  }
+  
+  .navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .find_item:first-child {
+    width: 23.413%
+}
+
+.find_item:nth-child(2) {
+    width: 23.413%
+}
+
+.find_item:nth-child(3) {
+    width: 23.413%
+}
+
+.find_item:nth-child(4) {
+    width: 10.122%
+}
+.find_item:nth-child(5) {
+    width: 10.122%
+}
+
+.find_item div {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 7px;
+}
+  
+  .find-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .find-input
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    width: 10rem;
+}
+.find-select
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    padding: 0 1.25rem 0;
+    width: 20rem;
+}
+
+
+
+.find-button{
+    height: 56px;
+    color: #fff;
+    background: #fe435b!important;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+a {
+    white-space: nowrap;
+}
+.signin-button {
+    right: 0;
+    margin: 0.125rem 3% 0;
+    padding: 0.4375rem 1.0625rem;
+    line-height: normal;
+    border-radius: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: #32a3b1;
+    /* position: absolute; */
+    translate: transform(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    color: white;
+    text-decoration: none;
+    
+}
+.register-button {
+    margin: 0.125rem 1% 0;
+    padding: 0.4375rem 1.0625rem;
+    line-height: normal;
+    border-radius: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: #df3838;
+    /* position: absolute; */
+    translate: transform(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    color: white;
+    text-decoration: none;
+}
+
+  .v-divider{
+    height:50px;
+    border-left:1px solid gray;
+   }
+  
+   .navbar-dark .navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.14px;
+    line-height: 18px;
+    padding: 1.2em;
+   }
+  
+  
+  
+   
+  
+   
+
+   @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+        .v-divider{
+            display: none;
+        }
+  }
+  

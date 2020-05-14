@@ -12,6 +12,8 @@ import Footer from './Components/Home/Footer';
 import RegistrationSuccess from './Pages/Register/RegistrationSuccess';
 import Activation from './Pages/Register/Activation';
 import SearchPackage from './Pages/Search/SearchPackage';
+import SearchResult from './Pages/Search/SearchResult';
+import BookingStep from './Components/Booking/BookingStep';
 
 class App extends React.Component{
   constructor(props){
@@ -33,7 +35,8 @@ class App extends React.Component{
               <Route path="/registerSuccess/:id" component={RegistrationSuccess}></Route>
               <Route path="/activate/:id" component={Activation}></Route>
               <Route path="/searchPackages" component={SearchPackage}></Route>
-              <Route path="/booking" component={BookingPackage}></Route>
+              <Route path="/searchResult" component={SearchResult}></Route>
+              <Route path="/booking" component={BookingStep}></Route>
               <Route path="/booking_confirm" component={Booking}></Route>
               <Redirect from='/registerSuccess/' to='/' exact />
               <Redirect from='/activate/' to='/' exact />

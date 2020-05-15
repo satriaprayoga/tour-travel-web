@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    min-height: 80px;
+    background: none;/*radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));*/
+    border-bottom: 0px !important;
+    box-shadow: none;
+  }
+  
+  .navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  }
+
+  .signin-button{
+    line-height: normal;
+    border-radius: 0px;
+    font-size: 1rem;
+    text-align: center;
+    background: #32a3b1;
+    position: absolute;
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    color: white;
+    text-decoration: none;
+  }

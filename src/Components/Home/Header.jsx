@@ -12,7 +12,7 @@ class Header extends Component {
     }
     render() {
         let dropDownMenu ;
-        if(this.props.currentUser){
+        if(this.props.isAuthenticated){
             dropDownMenu=(
                 <Dropdown className="dropdown-btn">
                 <Dropdown.Toggle id="dropdown-basic">
@@ -30,7 +30,9 @@ class Header extends Component {
         }
         return (
             <div>
+               
                 <div className="h-container">
+               
                     <div className="h-top">
                         <img className="h-logo" src={logo} />
                         {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="signIn-btn" to="/login">Sign In</Link>}

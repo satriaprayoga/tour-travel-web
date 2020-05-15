@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SearchForm extends React.Component{
     constructor(props){
@@ -34,7 +35,14 @@ class SearchForm extends React.Component{
     }
 
     handleClick(){
-      
+      const {destination,landmark,group}=this.state;
+      const dest=destination===''?'':'?dest='+destination;
+      const l=landmark===''?'':'&l='+landmark;
+      const g=group===''?'':'&g='+group;
+      const queryString=`${dest}${l}${g}`;
+      console.log(queryString);
+      this.props.history.push(`/searchResult/${queryString}`);
+                           //this.props.history.push(`/searchResult?dest=${this.state.destination}&l=${this.state.landmark}&g=${this.state.group}`)
     }
 
     render(){
@@ -48,8 +56,8 @@ class SearchForm extends React.Component{
                                     <div>Destination</div>
                                     <select className="find_select" name="destination" onChange={this.handleChange} value={this.state.destination}>
                                         <option value="" selected>Select destination</option>
-                                        <option value="1" >A</option>
-                                        <option value="2" >B</option>
+                                        <option value="BLRN" >Baluran Sabana Park</option>
+                                        <option value="PNCK" >Puncak Cibodas Nirwana</option>
                                     </select>
                                    
                                 </div>
@@ -57,8 +65,8 @@ class SearchForm extends React.Component{
                                     <div>Landmark</div>
                                     <select className="find_select" name="landmark" onChange={this.handleChange} value={this.state.landmark}>
                                         <option value="" selected>Select Landmark</option>
-                                        <option value="1" >A</option>
-                                        <option value="2" >B</option>
+                                        <option value="Gua Jepang" >Gua Jepang</option>
+                                        <option value="Pantai B" >Pantai B</option>
                                     </select>
                                    
                                 </div>
@@ -66,8 +74,8 @@ class SearchForm extends React.Component{
                                     <div>Package</div>
                                     <select className="find_select" name="group" onChange={this.handleChange} value={this.state.group}>
                                         <option value="" selected>Select Group</option>
-                                        <option value="1" >A</option>
-                                        <option value="2" >B</option>
+                                        <option value="Paket Hemat" >Paket Hemat</option>
+                                        <option value="Paket Family" >Paket Family</option>
                                     </select>
                                    
                                 </div>
@@ -82,4 +90,4 @@ class SearchForm extends React.Component{
     }
 }
 
-export default SearchForm;
+export default withRouter(SearchForm);

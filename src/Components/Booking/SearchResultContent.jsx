@@ -3,8 +3,10 @@ import './SearchResultContent.css';
 import styled from 'styled-components';
 import { Table, Card, ListGroup, Button } from 'react-bootstrap';
 import SearchResultElement from './SearchResultElement';
+import { withRouter } from 'react-router-dom';
 
 const SearchResultContent = (props) => {
+    const queryParam=props.location.search;
     const ResultHeader = styled.section`
     display:flex;
     width: 100vw;
@@ -69,4 +71,4 @@ const SearchResultContent = (props) => {
     )
 }
 
-export default SearchResultContent;
+export default withRouter(SearchResultContent);

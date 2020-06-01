@@ -16,7 +16,7 @@ class Activation extends React.Component{
         }
     }
     componentDidMount(){
-        axios.get(`${BASE_URL}:${BASE_PORT}/infosys-webclient/auth/success/${this.props.match.params.id}`).then((resp)=>{
+        axios.get(`${BASE_URL}:${BASE_PORT}/infosys-webclient/auth/success/${this.props.match.params.id}/`).then((resp)=>{
            this.setState({
               username:resp.data.response.username,
               id:resp.data.response.id,

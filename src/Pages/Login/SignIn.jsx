@@ -9,9 +9,10 @@ class SignIn extends React.Component{
     }
 
     handleLogin(){
+        const from=this.props.location.state;
+        this.props.history.replace(`/reload`)
         setTimeout(()=>{
-          this.props.history.replace(`/reload`)
-          const from=this.props.location.state;
+         
           if(from){
             this.props.history.push(from.from);
           }else{

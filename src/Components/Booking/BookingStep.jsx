@@ -81,7 +81,7 @@ class BookingStep extends React.Component {
             }
             BookingService.updatePayment(payment).then((resp)=>{
                 console.log(resp.data.response);
-                this.props.history.push("/");
+                this.props.history.push("/customer/bookings");
             })
         })
     }

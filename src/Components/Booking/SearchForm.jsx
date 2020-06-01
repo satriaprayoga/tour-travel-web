@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import DestinationService from '../../Services/DestinationService';
 
 class SearchForm extends React.Component{
     constructor(props){
@@ -7,11 +8,27 @@ class SearchForm extends React.Component{
         this.state={
             destination:"",
             landmark:"",
-            group:""
+            group:"",
+            destinations:[],
+            landmarks:[],
+            enable:false
         }
 
         this.handleChange=this.handleChange.bind(this);
         this.handleClick=this.handleClick.bind(this);
+        this.loadDestinations=this.loadDestinations.bind(this);
+    }
+
+    componentDidMount(){
+        this.loadDestinations();
+    }
+
+    loadDestinations(){
+        DestinationService.all().then((resp)=>{
+            this.setState({
+                destinations:resp.data
+            })
+        })
     }
 
     handleChange(event){
@@ -20,8 +37,13 @@ class SearchForm extends React.Component{
         });
         switch(event.target.name){
             case "destination":
-                console.log('destination');
-                
+                console.log(event.target.value);
+                DestinationService.landmarkByDestCode(event.target.value).then((resp)=>{
+                   this.setState({
+                       landmarks:resp.data,
+                       enable:true
+                   })
+                })
                 break;
             case "landmark":
                 console.log('landmark');
@@ -36,12 +58,12 @@ class SearchForm extends React.Component{
 
     handleClick(){
       const {destination,landmark,group}=this.state;
-      const dest=destination===''?'':'?dest='+destination;
+      const dest=destination===''?'':'dest='+destination;
       const l=landmark===''?'':'&l='+landmark;
       const g=group===''?'':'&g='+group;
       const queryString=`${dest}${l}${g}`;
-      console.log(queryString);
-      this.props.history.push(`/searchResult/${queryString}`);
+     // console.log(queryString);
+      this.props.history.push(`/searchResult?${queryString}`);
                            //this.props.history.push(`/searchResult?dest=${this.state.destination}&l=${this.state.landmark}&g=${this.state.group}`)
     }
 
@@ -56,8 +78,12 @@ class SearchForm extends React.Component{
                                     <div>Destination</div>
                                     <select className="find_select" name="destination" onChange={this.handleChange} value={this.state.destination}>
                                         <option value="" selected>Select destination</option>
-                                        <option value="BLRN" >Baluran Sabana Park</option>
-                                        <option value="PNCK" >Puncak Cibodas Nirwana</option>
+                                        {
+                                            this.state.destinations.map((d)=>(
+                                                <option value={d.code} >{d.destination}</option>
+                                               
+                                            ))
+                                        }
                                     </select>
                                    
                                 </div>
@@ -65,8 +91,11 @@ class SearchForm extends React.Component{
                                     <div>Landmark</div>
                                     <select className="find_select" name="landmark" onChange={this.handleChange} value={this.state.landmark}>
                                         <option value="" selected>Select Landmark</option>
-                                        <option value="Gua Jepang" >Gua Jepang</option>
-                                        <option value="Pantai B" >Pantai B</option>
+                                        {
+                                            this.state.landmarks.map((l)=>(
+                                                <option value={l.landmark}>{l.landmark}</option>
+                                            ))
+                                        }
                                     </select>
                                    
                                 </div>
@@ -80,7 +109,7 @@ class SearchForm extends React.Component{
                                    
                                 </div>
                                 
-                                <button className="find_button" onClick={this.handleClick}>Find</button>
+                                <button className="find_button" onClick={this.handleClick} disabled={!this.state.enable}>Find</button>
                         </div>
                     </div>
                 </div>

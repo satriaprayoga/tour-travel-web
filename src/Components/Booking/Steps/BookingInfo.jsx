@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import * as Yup from 'yup';
 import {Formik } from 'formik';
 import "react-datepicker/dist/react-datepicker.css";
+import BookingService from '../../../Services/BookingService';
 
 
 const BookingInfo = (props) => {
@@ -20,26 +21,24 @@ const BookingInfo = (props) => {
   // }
 
   // today = yyyy + '-' + mm + '-' + dd;
-  const initPerson=localStorage.getItem('person')?localStorage.getItem('person'):props.data.minOrder
-  const initDate=localStorage.getItem('checkIn')?localStorage.getItem('checkIn'):today;
+  const initPerson=props.data.minOrder
+  const initDate=today;
   const cancel=()=>{
-    localStorage.removeItem('person');
-    localStorage.removeItem('checkIn');
     props.history.push('/searchPackages');
   }
   return (
     <div className="bookingform-container">
       <Formik
         initialValues={{
-          person: initPerson,
+          person: props.data.minOrder,
           checkIn: new Date(initDate),
-          basePrice:props.data.basePrice
+          basePrice:props.data.price
         }}
         onSubmit={(values) => {
-          localStorage.setItem("person", values.person);
-          localStorage.setItem("checkIn", new Date(values.checkIn));
-          props.history.push('/booking/payment');
+          BookingService.setStatus('payment');
+          props.history.push('/booking/?id='+this.props.data.id);
         }}
+        enableReinitialize={true}
         validationSchema={
           Yup.object({
             person: Yup.number()

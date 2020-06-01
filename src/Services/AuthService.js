@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {AUTH_URL,USER_INFO_URL,ACCESS_TOKEN} from '../Constants';
+import {AUTH_URL,CUSTOMER_URL,ACCESS_TOKEN} from '../Constants';
 
 const AuthService={
 
@@ -17,6 +17,19 @@ const AuthService={
     },
     checkEmail:(email)=>{
         return axios.get(`${AUTH_URL}/exists?email=${email}`,)
+    },
+    isLogin:()=>{
+        return sessionStorage.getItem(ACCESS_TOKEN) && sessionStorage.getItem(ACCESS_TOKEN).length;
+    },
+    logout:()=>{
+        sessionStorage.clear();
+    },
+    currentUser:()=>{
+        let AuthStr = '';
+        if (sessionStorage.getItem(ACCESS_TOKEN)) {
+            AuthStr = 'Bearer '.concat(sessionStorage.getItem(ACCESS_TOKEN));
+        }
+        return axios.get(CUSTOMER_URL + "/me", { headers: { 'Authorization': AuthStr } });
     }
 }
 

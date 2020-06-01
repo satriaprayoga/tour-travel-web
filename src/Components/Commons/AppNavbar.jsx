@@ -21,7 +21,7 @@ class AppNavbar extends React.Component{
 
                 <Dropdown.Menu>
                     <Dropdown.Item href="#/action-1"><FiSettings></FiSettings><span>User Setting</span></Dropdown.Item>
-                    <Dropdown.Item href="#/action-2"><FiBookmark></FiBookmark><span>My Booking</span></Dropdown.Item>
+                    <Dropdown.Item href="/customer"><FiBookmark></FiBookmark><span>My Booking</span></Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item href="#/action-3"><FiLogOut></FiLogOut><span>Sign Out</span></Dropdown.Item>
                 </Dropdown.Menu>

@@ -32,19 +32,19 @@ const SearchResultContent = (props) => {
         <Fragment>
             <ResultHeader>
                 <div className="result-content">
-                    <h1 className="result-title">Baluran Sabana Park</h1>
-                    <h3 className="result-subtitle">Situbondo, East Java</h3>
+                    <h1 className="result-title">{props.data.destination}</h1>
+                    <h3 className="result-subtitle">{props.data.location}</h3>
                     <div className="result-info-container">
                         <div className="result-info">
                             <h1>Fact about Baluran Sabana Park</h1>
                             <Table borderless>
                                 <tr>
                                     <td>Provider</td>
-                                    <td>PT Baluran Sabana</td>
+                                    <td>{props.data.company}</td>
                                 </tr>
                                 <tr>
                                     <td>Contact</td>
-                                    <td>baluran@mail.com</td>
+                                    <td>{props.data.email}</td>
 
                                 </tr>
                                 <tr>
@@ -61,10 +61,11 @@ const SearchResultContent = (props) => {
                 <h1 className="result-package-title">Your Search Results</h1>
                 <div className="result-line"></div>
                 <div className="result-package-list">
-                    <SearchResultElement data={pkg}/>
-                    <SearchResultElement data={pkg}/>
-                    <SearchResultElement data={pkg}/>
-                
+                  {
+                      props.tours.map((t)=>(
+                        <SearchResultElement data={t}/>
+                      ))
+                  }
                 </div>
             </div>
         </Fragment>

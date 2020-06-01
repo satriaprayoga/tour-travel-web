@@ -1,10 +1,14 @@
 import React from 'react';
 import './SearchResultElement.css';
+import BookingService from '../../Services/BookingService'
 import { Button } from 'react-bootstrap';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 const SearchResultElement = (props) => {
-
+    function handleClick(){
+        props.history.push(`/booking/?id=${props.data.id}`)
+        BookingService.setStatus("create")
+    }
     return (
         <div className="search-element-container">
             <div className="search-element-inner">
@@ -26,7 +30,7 @@ const SearchResultElement = (props) => {
                     })} / {props.data.unit}</h2>
                     <p>{props.data.day} Day(s) {props.data.night} Night(s), Min. Order {props.data.minOrder} {props.data.unit}</p>
                     <div className="search-element-button-item">
-                        <Button className="search-element-button-book">Book Now</Button>
+                        <Button className="search-element-button-book" onClick={handleClick}>Book Now</Button>
                         <Button className="search-element-button-detail">Detail</Button>
                     </div>
                 </div>
@@ -35,5 +39,4 @@ const SearchResultElement = (props) => {
         </div>
     )
 }
-
 export default withRouter(SearchResultElement);

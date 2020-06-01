@@ -1,0 +1,372 @@
+.booking-container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)),
+    url('../../assets/Beautifulsea.jpg') no-repeat center center/cover;
+    padding-bottom: 5rem;
+}
+.booking-container::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    box-shadow: inset 70px 50px 190px #000,
+                inset -70px -50px -190px;
+}
+
+.booking-container p{
+    font-size: 11px;
+}
+
+.booking-container span{
+    font-size: 14px;
+}
+
+.booking-top
+{
+    position: relative;
+    height: 10rem;
+    z-index: 1;
+}
+
+.booking-logo
+{
+    width: 10rem;
+    height: 4.512rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.step-container
+{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.bookingform-container
+{
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    width: 28.125rem;
+    height: 100%;
+    padding: 4rem;
+    color: white;
+}
+.bookingform-input-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1.0rem;
+}
+.bookingform-input
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    padding: 0 1.25rem 0;
+}
+
+.bookingform-input-date{
+    width: 100%;
+    height: 56px;
+    outline: none;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 52px;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 2.75rem;
+    padding: 0 1.25rem 0;
+    background: #333333;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    background: #333333;
+  }
+
+
+form div label
+{
+    position: absolute;
+    top: 0.625rem;
+    left: 1.25rem;
+    pointer-events: none;
+    color: #8a8a8a;
+    font-size: 1rem;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+form div 
+{
+    position: relative;
+}
+input:focus ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+}
+input:focus
+{
+    outline: none;
+}
+/* input ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+} */
+
+.bookingform-input-error
+{
+    border-bottom: 1px solid tomato;
+}
+
+
+
+.bookingform-button-container{
+    padding: 1.0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bookingform-btn
+{
+    color: white;
+    width: 6rem;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    font-size: 1rem;
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    padding: 0.3rem 0.3rem;
+}
+
+.bookingform-checkbox
+{
+    margin-left: 0.5rem;
+    padding-left: 1.875rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: #999999;
+    cursor: pointer;
+}
+.bookingform-checkbox input
+{
+    display: none;
+}
+.bookingform-checkbox .checkmark
+{
+    display: inline-block;
+    background: #454545;
+    width: 1.1rem;
+    height: 1.1rem;
+    left: 0;
+    top: 0;
+    border-radius: 0.1rem;
+    position: absolute;
+}
+.bookingform-checkbox input:checked + .checkmark::after
+{
+    content: '';
+    position: absolute;
+    height: 0.25rem;
+    width: 0.625rem;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 25%;
+    left: 21%;
+    transform: rotate(-45deg);
+}
+.bookingform-help
+{
+    text-decoration: none;
+    color: #828282;
+    margin-left: 6.6rem;
+    font-size: 0.9rem;
+}
+.bookingform-help:hover
+{
+    color: #828282;
+}
+
+.bookingform-input-container .react-datepicker {
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.8);
+    color: #fff !important;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.bookingform-input-container .react-datepicker__header {
+    color: #fff !important;
+    text-align: center;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 8px;
+    position: relative;
+}
+
+.bookingform-input-container .react-datepicker__current-month{
+    color: #fff 
+}
+
+.react-datepicker__day-name{
+    color: #fff;
+}
+
+.bookingform-input-container .react-datepicker__day{
+    color: #fff;
+}
+
+.bookingform-input-container .react-datepicker__day:hover{
+    border-radius: 0;
+    background-color: #130101;
+    color: #fff;
+}
+
+.bookingform-container .react-datepicker__day--selected{
+    border-radius: 0;
+}
+
+.bookingform-container .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before, .react-datepicker__month-year-read-view--down-arrow::before {
+    border-bottom: none;
+    border-top-color: #fff;
+}
+
+.bookingform-container .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
+    bottom: 0;
+    margin-bottom: -8px;
+}
+
+.bookingform-container .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before, .react-datepicker__month-read-view--down-arrow::before, .react-datepicker__month-year-read-view--down-arrow::before {
+    box-sizing: content-box;
+    position: absolute;
+    border: 8px solid transparent;
+    height: 0;
+    width: 1px;
+}
+
+.bookingform-container .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
+    margin-left: -8px;
+    position: absolute;
+}
+
+/* .bookingform-bottom .bookingform-fblogo
+{
+    width: 1.5625rem;
+    height: 1.5rem;
+    margin: 0.625rem 0.625rem -0.4375rem 0;
+    color: #4267B2;
+}
+.bookingform-fb-text
+{
+    color: #828282;
+    font-size: 0.9rem;
+} */
+.bookingform-bottom
+{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.bookingform-signup
+{
+    color: #999999;
+    font-size: 14px;
+}
+.bookingform-signup-text
+{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.bookingform-signup-text:hover
+{
+    color: white;
+}
+
+.bookingform-error-text
+{
+    color: tomato;
+    font-size: 12px;
+}
+
+@media (max-width: 524px)
+{
+    .bookingform-container
+    {
+        width: 25rem;
+        height: 35rem;
+        padding: 3rem;
+    }
+    .bookingform-help
+    {
+        margin-left: 5rem;
+       
+    }
+}
+
+@media (max-width: 405px)
+{
+    .bookingform-container
+    {
+        width: 22rem;
+        height: 32rem;
+        padding: 2rem;
+    }
+    .bookingform-help
+    {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 362px)
+{
+    .bookingform-container
+    {
+        width: 20rem;
+        height: 30rem;
+        padding: 1.5rem;
+    }
+    .bookingform-help
+    {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 323px)
+{
+    .bookingform-container
+    {
+        width: 18rem;
+        height: 28.75rem;
+        padding: 1rem;
+    }
+    .bookingform-help
+    {
+        margin-left: 2rem;
+    }
+}

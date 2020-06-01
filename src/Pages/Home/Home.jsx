@@ -6,10 +6,13 @@ import TabComponent from '../../Components/Home/TabComponent';
 import Footer from '../../Components/Home/Footer';
 
 class Home extends Component {
+    constructor(props){
+      super(props);
+    }
     render() {
       return (
         <Fragment>
-           <Header isAuthenticated={false}/>
+           <Header isAuthenticated={this.props.isAuthenticated} onLogout={this.props.onLogout} currentUser={this.props.currentUser}/>
           <TabComponent />
         </Fragment>
       );

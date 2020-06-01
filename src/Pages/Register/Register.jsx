@@ -44,43 +44,32 @@ const Register = (props) => {
         onSubmit: values => {
             console.log(values);
             // props.history.push('/');
-            // const emailRegistered = {}
-            // AuthService.checkEmail(values.email).then((resp) => {
-            //     if (resp.data.response === true) {
-            //         alert("email already registered");
-            //         emailRegistered.email = "Email Already Registered"
+            const emailRegistered = {}
+            AuthService.checkEmail(values.email).then((resp) => {
+                if (resp.data.response === true) {
+                    alert("email already registered");
+                    emailRegistered.email = "Email Already Registered"
 
-            //     } else {
-            //         let activationUrl = `${window.location.protocol}//${window.location.host}/activate/`
-            //         let request = {
-            //             username: values.username,
-            //             email: values.email,
-            //             password: values.password,
-            //             provider: 'local',
-            //             activationUrl: activationUrl
-            //         }
+                } else {
+                    let host=(window.location.port==="")?window.location.hostname:window.location.host;
+                    let activationUrl = `${window.location.protocol}//${host}/activate/`
+                    console.log(activationUrl);
+                    let request = {
+                        username: values.username,
+                        email: values.email,
+                        password: values.password,
+                        provider: 'local',
+                        activationUrl: activationUrl
+                    }
 
-            //         AuthService.register(request).then((resp) => {
-            //             const data = resp.data;
-            //             props.history.push('/registerSuccess/' + data.id);
-            //         })
+                    AuthService.register(request).then((resp) => {
+                        const data = resp.data;
+                        props.history.push('/registerSuccess/' + data.id);
+                    })
 
-            //     }
-            //});
-            // let activationUrl=`${window.location.protocol}//${window.location.host}/activate/`
-            // let request={
-            //     username:values.username,
-            //     email:values.email,
-            //     password:values.password,
-            //     provider:'local',
-            //     activationUrl:activationUrl
-            // }
-
-            // AuthService.register(request).then((resp)=>{
-            //     const data=resp.data;
-            //     props.history.push('/registerSuccess/'+data.id);
-            // })
-
+                }
+            });
+            
         }
 
 

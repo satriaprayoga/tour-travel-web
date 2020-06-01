@@ -2,11 +2,13 @@ import React from 'react';
 import './Login.css';
 import logo from '../../assets/logobig.png'
 import { useFormik } from 'formik';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import jwt from 'jwt-decode';
+import AuthService from '../../Services/AuthService';
 
 const Login = (props) => {
-
+   
     const validate = values => {
         const errors = {};
         if (!values.password) {
@@ -28,8 +30,20 @@ const Login = (props) => {
         },
         validate,
         onSubmit: values => {
-            console.log(values);
-            //props.history.push('/');
+            let loginRequest={
+                email:values.email,
+                password:values.password,
+                rememberMe:values.rememberMe
+            }
+            AuthService.login(loginRequest).then((resp)=>{
+                const token=resp.data.accessToken;
+                console.log(resp);
+                sessionStorage.setItem('ittac',token);
+                sessionStorage.setItem('ittac_exp',jwt(token).exp);
+                props.onLogin();
+            }).catch(error=>{
+                alert('Server failed to do the authentication');
+            });
         },
     });
     return (
@@ -89,4 +103,4 @@ const Login = (props) => {
     );
 }
 
-export default Login;
+export default withRouter(Login);

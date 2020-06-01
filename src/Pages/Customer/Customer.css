@@ -1,0 +1,282 @@
+.customer-container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)),
+    url('../../assets/Beautifulsea.jpg') no-repeat center center/cover;
+    padding-bottom: 5rem;
+}
+.customer-container::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    box-shadow: inset 70px 50px 190px #000,
+                inset -70px -50px -190px;
+}
+.customer-top
+{
+    position: relative;
+    height: 10rem;
+    z-index: 1;
+}
+
+.customer-logo
+{
+    width: 10rem;
+    height: 4.512rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container
+{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.customerform-container
+{
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    width: 28.125rem;
+    height: 100%;
+    padding: 4rem;
+    color: white;
+}
+.customerform-input-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1.2rem;
+}
+.customerform-input
+{
+    color: white;
+    background: #333333;
+    border: 0;
+    border-radius: 0.25rem;
+    height: 3rem;
+    padding: 0 1.25rem 0;
+}
+form div label
+{
+    position: absolute;
+    top: 0.625rem;
+    left: 1.25rem;
+    pointer-events: none;
+    color: #8a8a8a;
+    font-size: 1rem;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+form div 
+{
+    position: relative;
+}
+input:focus ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+}
+input:focus
+{
+    outline: none;
+}
+/* input ~ label
+{
+    top: 0.4375rem;
+    font-size: 0.7rem;
+} */
+
+.customerform-input-error
+{
+    border-bottom: 1px solid tomato;
+}
+
+.customerform-btn
+{
+    color: white;
+    background: #32a3b1;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.125rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.signupform-btn
+{
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.125rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.customerform-checkbox
+{
+    margin-left: 0.5rem;
+    padding-left: 1.875rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: #999999;
+    cursor: pointer;
+}
+.customerform-checkbox input
+{
+    display: none;
+}
+.customerform-checkbox .checkmark
+{
+    display: inline-block;
+    background: #454545;
+    width: 1.1rem;
+    height: 1.1rem;
+    left: 0;
+    top: 0;
+    border-radius: 0.1rem;
+    position: absolute;
+}
+.customerform-checkbox input:checked + .checkmark::after
+{
+    content: '';
+    position: absolute;
+    height: 0.25rem;
+    width: 0.625rem;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 25%;
+    left: 21%;
+    transform: rotate(-45deg);
+}
+.customerform-help
+{
+    text-decoration: none;
+    color: #828282;
+    margin-left: 6.6rem;
+    font-size: 0.9rem;
+}
+.customerform-help:hover
+{
+    color: #828282;
+}
+
+/* .customerform-bottom .customerform-fblogo
+{
+    width: 1.5625rem;
+    height: 1.5rem;
+    margin: 0.625rem 0.625rem -0.4375rem 0;
+    color: #4267B2;
+}
+.customerform-fb-text
+{
+    color: #828282;
+    font-size: 0.9rem;
+} */
+.customerform-bottom
+{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.customerform-signup
+{
+    color: #999999;
+    font-size: 14px;
+}
+.customerform-signup-text
+{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.customerform-signup-text:hover
+{
+    color: white;
+}
+
+.customerform-error-text
+{
+    color: tomato;
+    font-size: 12px;
+}
+
+@media (max-width: 524px)
+{
+    .customerform-container
+    {
+        width: 25rem;
+        height: 35rem;
+        padding: 3rem;
+    }
+    .customerform-help
+    {
+        margin-left: 5rem;
+       
+    }
+}
+
+@media (max-width: 405px)
+{
+    .customerform-container
+    {
+        width: 22rem;
+        height: 32rem;
+        padding: 2rem;
+    }
+    .customerform-help
+    {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 362px)
+{
+    .customerform-container
+    {
+        width: 20rem;
+        height: 30rem;
+        padding: 1.5rem;
+    }
+    .customerform-help
+    {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 323px)
+{
+    .customerform-container
+    {
+        width: 18rem;
+        height: 28.75rem;
+        padding: 1rem;
+    }
+    .customerform-help
+    {
+        margin-left: 2rem;
+    }
+}

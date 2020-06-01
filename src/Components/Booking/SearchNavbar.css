@@ -44,6 +44,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
 
   .find-input
@@ -97,6 +98,31 @@ a {
     text-decoration: none;
     
 }
+
+.dropdown{
+    border-radius: 0px;
+}
+
+.dropdown-button{
+    margin: 0.125rem 3% 0;
+    padding: 0.4375rem 3.0625rem;
+    line-height: normal;
+    border-radius: 0px;
+    font-size: 1rem;
+    text-align: center;
+    /* position: absolute; */
+    translate: transform(-50%, -50%);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-btn span{
+    text-align: center;
+    padding: 1.5rem;
+    line-height: normal;
+}
+
 .register-button {
     margin: 0.125rem 1% 0;
     padding: 0.4375rem 1.0625rem;
@@ -112,6 +138,8 @@ a {
     color: white;
     text-decoration: none;
 }
+
+
 
   .v-divider{
     height:50px;

@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import './Header.css';
 import { FiUser, FiSettings, FiLogOut, FiBookmark } from "react-icons/fi";
+import AuthService from '../../Services/AuthService';
 
 class Header extends Component {
     constructor(props) {
         super(props);
     }
+    
     render() {
         let dropDownMenu ;
-        if(this.props.isAuthenticated){
+        if(this.props.currentUser){
             dropDownMenu=(
                 <Dropdown className="dropdown-btn">
                 <Dropdown.Toggle id="dropdown-basic">
@@ -20,10 +22,10 @@ class Header extends Component {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1"><FiSettings></FiSettings><span>User Setting</span></Dropdown.Item>
-                    <Dropdown.Item href="#/action-2"><FiBookmark></FiBookmark><span>My Booking</span></Dropdown.Item>
+            <Dropdown.Item href="#/action-1"><FiSettings></FiSettings><span>{this.props.currentUser.email}</span></Dropdown.Item>
+                    <Dropdown.Item href="/customer/bookings"><FiBookmark></FiBookmark><span>My Booking</span></Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/action-3"><FiLogOut></FiLogOut><span>Sign Out</span></Dropdown.Item>
+                    <Dropdown.Item onClick={this.props.onLogout}><FiLogOut></FiLogOut><span>Sign Out</span></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
             )

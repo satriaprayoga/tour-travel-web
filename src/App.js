@@ -53,6 +53,7 @@ class App extends React.Component{
   handleLogout(){
     AuthService.logout();
     this.setState({currentUser:{},isAuthenticated:false})
+    this.props.history.replace(`/reload`)
     this.props.history.push("/");
   }
 

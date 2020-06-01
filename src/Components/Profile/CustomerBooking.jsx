@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingService from '../../Services/BookingService';
 import { Button } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
 
 class CustomerBooking extends React.Component{
     constructor(props){
@@ -56,4 +57,4 @@ class CustomerBooking extends React.Component{
     }
 }
 
-export default CustomerBooking;
+export default withRouter(CustomerBooking);

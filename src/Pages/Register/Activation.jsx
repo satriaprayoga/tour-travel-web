@@ -3,7 +3,7 @@ import './Register.css';
 import axios from "axios";
 import logo from '../../assets/logobig.png'
 import AuthService from "../../Services/AuthService";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import {BASE_URL,BASE_PORT} from '../../Constants';
 
 class Activation extends React.Component{
@@ -53,4 +53,4 @@ class Activation extends React.Component{
 }
 
 
-export default Activation;
+export default withRouter(Activation);

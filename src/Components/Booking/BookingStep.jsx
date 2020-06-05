@@ -1,7 +1,6 @@
 import React from 'react';
 import './BookingStep.css'
 import logo from '../../assets/logobig.png'
-import BookingInfo from './Steps/BookingInfo';
 import { Link, Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import qs from 'qs';
 import * as Yup from 'yup';

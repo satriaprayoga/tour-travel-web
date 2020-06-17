@@ -229,7 +229,7 @@ input:focus
     .registerform-container
     {
         width: 25rem;
-        height: 35rem;
+        height: 42rem;
         padding: 3rem;
     }
     .registerform-help
@@ -244,7 +244,7 @@ input:focus
     .registerform-container
     {
         width: 22rem;
-        height: 32rem;
+        height: 40rem;
         padding: 2rem;
     }
     .registerform-help
@@ -258,7 +258,7 @@ input:focus
     .registerform-container
     {
         width: 20rem;
-        height: 30rem;
+        height: 39rem;
         padding: 1.5rem;
     }
     .registerform-help
@@ -272,7 +272,7 @@ input:focus
     .registerform-container
     {
         width: 18rem;
-        height: 28.75rem;
+        height: 38rem;
         padding: 1rem;
     }
     .registerform-help

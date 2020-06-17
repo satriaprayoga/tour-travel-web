@@ -40,7 +40,7 @@ class Header extends Component {
                         {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="signIn-btn" to="/login">Sign In</Link>}
                     </div>
                     <div className="h-content">
-                        <h1 className="h-title">Travel Now</h1>
+                        <h1 className="h-title">Time To Travel</h1>
                         <h3 className="h-subtitle">Search Over 100+ Destination Across The Country</h3>
                         <InputGroup size="lg">
                             <InputGroup.Prepend>

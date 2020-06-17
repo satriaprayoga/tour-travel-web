@@ -243,18 +243,33 @@
         transform: translateY(-15px); 
     }
 }
-@media (max-width: 524px)
+
+@media (max-width: 500px)
 {
-    .pd-card .pd-poster::before
+    .pl-container
     {
-        bottom: -85px;
+        width: 250px;
+        height: 1017px;
     }
-    .pd-details
+    .pl-container .pl-box
     {
-        bottom: -180px;
+        width: 250px;
+        height: 250px;
+        margin: 2px;
     }
-    .pd-card:hover .pd-details
+}
+
+@media (max-width: 390px)
+{
+    .pl-container
     {
-        bottom: -50px;
+        width: 250px;
+        height: 1009px;
+    }
+    .pl-container .pl-box
+    {
+        width: 250px;
+        height: 250px;
+        margin: 1px;
     }
 }

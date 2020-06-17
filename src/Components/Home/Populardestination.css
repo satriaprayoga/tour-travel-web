@@ -131,7 +131,7 @@
 .pd-tags
 {
     position: relative;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .pd-tags .pd-tags-land
 {
@@ -173,7 +173,7 @@
     }
 }
 
-@media (max-width: 525px)
+@media (max-width: 524px)
 {
     .pd-slider
     {

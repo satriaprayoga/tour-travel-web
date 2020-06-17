@@ -247,3 +247,19 @@
         font-size: 12px;   
     }
 }
+
+@media (max-width: 500px)
+{
+    .pk-container .pk-card
+    {
+        width: 350px;
+    }   
+}
+
+@media (max-width: 380px)
+{
+    .pk-container .pk-card
+    {
+        width: 300px;
+    }   
+}

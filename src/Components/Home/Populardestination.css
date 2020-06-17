@@ -172,18 +172,12 @@
         font-size: 12px;   
     }
 }
+
 @media (max-width: 524px)
 {
-    .pd-card .pd-poster::before
+    .pd-slider
     {
-        bottom: -85px;
-    }
-    .pd-details
-    {
-        bottom: -180px;
-    }
-    .pd-card:hover .pd-details
-    {
-        bottom: -50px;
+        width: 80%;
+        margin: auto;
     }
 }

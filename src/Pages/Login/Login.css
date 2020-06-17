@@ -229,7 +229,7 @@ input:focus
     .loginform-container
     {
         width: 25rem;
-        height: 36rem;
+        height: 35rem;
         padding: 3rem;
     }
     .loginform-help
@@ -244,7 +244,7 @@ input:focus
     .loginform-container
     {
         width: 22rem;
-        height: 34rem;
+        height: 32.5rem;
         padding: 2rem;
     }
     .loginform-help
@@ -258,7 +258,7 @@ input:focus
     .loginform-container
     {
         width: 20rem;
-        height: 33rem;
+        height: 32rem;
         padding: 1.5rem;
     }
     .loginform-help
@@ -272,7 +272,7 @@ input:focus
     .loginform-container
     {
         width: 18rem;
-        height: 31.75rem;
+        height: 31.5rem;
         padding: 1rem;
     }
     .loginform-help

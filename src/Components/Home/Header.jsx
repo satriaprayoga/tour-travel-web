@@ -37,7 +37,7 @@ class Header extends Component {
                
                     <div className="h-top">
                         <img className="h-logo" src={logo} />
-                        {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="booknow" to="/login">Book Now</Link>}
+                        {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="booknow" to="#">Book Now</Link>}
                         {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="signIn-btn" to="/login">Sign In</Link>}
                     </div>
                     <div className="h-content">

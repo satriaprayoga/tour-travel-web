@@ -37,17 +37,18 @@ class Header extends Component {
                
                     <div className="h-top">
                         <img className="h-logo" src={logo} />
+                        {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="booknow" to="/login">Book Now</Link>}
                         {this.props.isAuthenticated ?<Fragment >{dropDownMenu}</Fragment> : <Link className="signIn-btn" to="/login">Sign In</Link>}
                     </div>
                     <div className="h-content">
                         <h1 className="h-title">Time To Travel</h1>
                         <h3 className="h-subtitle">Search Over 100+ Destination Across The Country</h3>
-                        <InputGroup size="lg">
+                        {/* <InputGroup size="lg">
                             <InputGroup.Prepend>
                                 <Button variant="info"><FaSearch /></Button>
                             </InputGroup.Prepend>
                             <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Insert the Destinations" />
-                        </InputGroup>
+                        </InputGroup> */}
                     </div>
                 </div>
             </div>

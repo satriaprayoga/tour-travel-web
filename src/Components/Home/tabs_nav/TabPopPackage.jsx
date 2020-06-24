@@ -6,7 +6,7 @@ export default function TabPopPackage() {
         <div>
             <div className="tabs-box">
                 <FaTags className="tab-icon-pp"/>
-                <p><strong>Packages</strong></p>
+                <p><strong>Investment</strong></p>
             </div>
         </div>
     )

@@ -32,9 +32,9 @@ class TabComponent extends Component {
                         <Tab className={`${this.state.tabIndex === 2 ? 'tab-selected active' : null}`}>
                             <TabPopPackage />
                         </Tab>
-                        <Tab className={`${this.state.tabIndex === 3 ? 'tab-selected active' : null}`}>
+                        {/* <Tab className={`${this.state.tabIndex === 3 ? 'tab-selected active' : null}`}>
                             <TabPopReview />
-                        </Tab>
+                        </Tab> */}
                     </TabList>
                     <TabPanel>
                         <PopularDestination />
@@ -45,9 +45,9 @@ class TabComponent extends Component {
                     <TabPanel>
                         <PopularPackage />
                     </TabPanel>
-                    <TabPanel>
+                    {/* <TabPanel>
                         <Testimoni />
-                    </TabPanel>
+                    </TabPanel> */}
                 </Tabs>
             </div>
         );

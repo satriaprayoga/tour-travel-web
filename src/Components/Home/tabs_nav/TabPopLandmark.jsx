@@ -6,7 +6,7 @@ export default function TabPopLandmark() {
         <div>
             <div className="tabs-box">
                 <FaUmbrellaBeach className="tab-icon-pl"/>
-                <p><strong>Landmarks</strong></p>
+                <p><strong>Tour & Travel</strong></p>
             </div>
         </div>
     )

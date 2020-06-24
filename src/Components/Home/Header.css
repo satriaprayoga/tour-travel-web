@@ -76,7 +76,7 @@
 .signIn-btn
 {
     right: 0;
-    margin: 1.125rem 3% 0;
+    margin: 1.125rem 2rem 0;
     padding: 0.4375rem 1.0625rem;
     font-weight: 400;
     line-height: normal;
@@ -91,6 +91,30 @@
     text-decoration: none;
 }
 .signIn-btn:hover
+{
+    background: #227b96;
+    color: white;
+    text-decoration: none;
+}
+
+.booknow
+{
+    right: 0;
+    margin: 1.125rem 8rem 0;
+    padding: 0.4375rem 1.0625rem;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0.1875rem;
+    font-size: 1rem;
+    background: #32a3b1;
+    position: absolute;
+    translate: transform(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    color: white;
+    text-decoration: none;
+}
+.booknow:hover
 {
     background: #227b96;
     color: white;
@@ -154,5 +178,13 @@
     .h-title
     {
         font-size: 4rem;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .h-logo
+    {
+    left: 6.5rem;
     }
 }

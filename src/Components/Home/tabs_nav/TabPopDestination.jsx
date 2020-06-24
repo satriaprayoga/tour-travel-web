@@ -6,7 +6,7 @@ export default function TabPopDestination() {
         <div>
             <div className="tabs-box">
                 <FaSuitcaseRolling className="tab-icon-pd"/>
-                <p><strong>Destinations</strong></p>
+                <p><strong>Hotel</strong></p>
             </div>
         </div>
     )

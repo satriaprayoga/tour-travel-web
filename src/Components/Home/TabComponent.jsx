@@ -6,6 +6,7 @@ import TabPopPackage from './tabs_nav/TabPopPackage';
 import TabPopReview from './tabs_nav/TabPopReview';
 
 import PopularDestination from './Populardestination';
+import PopularHotel from './Popularhotel';
 import PopularLandmark from './PopularLandmark';
 import PopularPackage from './PopularPackage';
 import Testimoni from './Testimoni';
@@ -37,13 +38,13 @@ class TabComponent extends Component {
                         </Tab> */}
                     </TabList>
                     <TabPanel>
-                        <PopularDestination />
-                    </TabPanel>
-                    <TabPanel>
-                        <PopularLandmark />
+                        <PopularHotel />
                     </TabPanel>
                     <TabPanel>
                         <PopularPackage />
+                    </TabPanel>
+                    <TabPanel>
+                        <PopularDestination />
                     </TabPanel>
                     {/* <TabPanel>
                         <Testimoni />

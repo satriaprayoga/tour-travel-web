@@ -1,0 +1,168 @@
+.hocontainer
+{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin : 10px auto 0px;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hocontainer .hobox:nth-child(3)
+{
+    top: 20px;
+    left: 50%;
+}
+
+.hocontainer .hobox
+{
+    position: relative;
+    width: calc(450px - 30px);
+    height: calc(280px - 30px);
+    background: grey;
+    float: left;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hocontainer .hobox .hofoto
+{
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+}
+
+.hocontainer .hobox .hofoto .hoicon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+    color: white;
+}
+
+.hocontainer .hobox .hoicon .hotitle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+    color:white;
+}
+
+.hocontainer .hobox:hover .hoicon .hotitle
+{
+    top: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.hocontainer .hobox .hocontent
+{
+    position: absolute;
+    top: 300px;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    color: white;
+    visibility: hidden;
+}
+
+.hocontainer .hobox:hover .hocontent
+{
+    top: 80px;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.hocontainer .hobox .hocontent .hotxt
+{
+    font-size: 16px;
+}
+
+/* screen */
+@media (max-width: 900px)
+{
+    .hocontainer
+    {
+        width: 450px;
+        margin-top: 30px;
+        height: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hocontainer .hobox:nth-child(3)
+    {
+        top: 0px;
+        left: 0%;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .hocontainer
+    {
+        width: 400px;
+    }
+    .hocontainer .hobox
+    {
+        width: calc(400px - 30px);
+    }
+}
+
+@media (max-width: 400px)
+{
+    .hocontainer
+    {
+        width: 350px;
+    }
+    .hocontainer .hobox
+    {
+        width: calc(350px - 30px);
+        height: calc(230px - 30px);
+    }
+    .hocontainer .hobox .hocontent .hotxt
+    {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px)
+{
+    .hocontainer
+    {
+        width: 300px;
+    }
+    .hocontainer .hobox
+    {
+        width: calc(300px - 30px);
+        height: calc(180px - 30px);
+    }
+    .hocontainer .hobox .hoicon .hotitle
+    {
+        font-size: 36px;
+    }
+    .hocontainer .hobox:hover .hoicon .hotitle
+    {
+        top: 30px;
+    }
+    .hocontainer .hobox:hover .hocontent
+    {
+        top: 40px;
+    }
+    .hocontainer .hobox .hocontent .hotxt
+    {
+        font-size: 12px;
+    }
+}

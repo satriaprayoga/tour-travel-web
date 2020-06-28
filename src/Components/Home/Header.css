@@ -106,7 +106,6 @@
     line-height: normal;
     border-radius: 0.1875rem;
     font-size: 1rem;
-    background: #32a3b1;
     position: absolute;
     translate: transform(-50%, -50%);
     cursor: pointer;
@@ -116,7 +115,6 @@
 }
 .booknow:hover
 {
-    background: #227b96;
     color: white;
     text-decoration: none;
 }
@@ -185,6 +183,14 @@
 {
     .h-logo
     {
-    left: 6.5rem;
+    left: 6rem;
+    }
+    .signIn-btn
+    {
+        margin: 1.125rem 1rem 0;
+    }
+    .booknow
+    {
+    margin: 1.125rem 6.5rem 0;
     }
 }

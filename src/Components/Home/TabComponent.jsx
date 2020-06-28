@@ -9,6 +9,7 @@ import PopularDestination from './Populardestination';
 import PopularHotel from './Popularhotel';
 import PopularLandmark from './PopularLandmark';
 import PopularPackage from './PopularPackage';
+import ComingSoon from './ComingSoon';
 import Testimoni from './Testimoni';
 
 import './TabComponent.css';
@@ -44,7 +45,7 @@ class TabComponent extends Component {
                         <PopularPackage />
                     </TabPanel>
                     <TabPanel>
-                        <PopularDestination />
+                        <ComingSoon />
                     </TabPanel>
                     {/* <TabPanel>
                         <Testimoni />

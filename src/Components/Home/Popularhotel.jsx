@@ -3,8 +3,6 @@ import { Tab, Row, Col, Nav } from 'react-bootstrap';
 
 import PopHotel from './pophotel/PopHotel';
 
-import TEST from '../../assets/Beautifulsea.jpg';
-
 //style
 import './Popularhotel.css';
 
@@ -30,9 +28,9 @@ class PopularHotel extends Component {
 
     render() {
             const hotel=[
-            { "id": 1, "url": "../../assets/Beautifulsea.jpg", "title": "CAMPER"},
-            { "id": 2, "url": "https://www.whzed.com/wp-content/uploads/2017/11/3_preview-1.jpeg", "title": "GLAMCAMP"},
-            { "id": 3, "url": "https://storage.googleapis.com/finansialku_media/wordpress_media/2018/05/Tengok-Analisis-Bisnis-Penginapan-Homestay-1-Finansialku.jpg", "title": "HOMESTAY"}
+            { "id": 1, "url": " ", "title": "CAMPER"},
+            { "id": 2, "url": " ", "title": "GLAMCAMP"},
+            { "id": 3, "url": " ", "title": "HOMESTAY"}
            ];
         return (
             <Fragment>

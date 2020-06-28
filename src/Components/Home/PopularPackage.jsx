@@ -21,12 +21,12 @@ class PopularPackage extends Component {
                 <div className="pk-container">
 
                     <div className="pk-card">
-                        <div className="pk-imgBx" data-text="Reguler">
+                        <div className="pk-imgBx" data-text="Individu">
                             <FaParachuteBox className="pk-icon"/>
                         </div>
                         <div className="pk-content">
                             <div>
-                                <h2 className="pk-paket">Reguler - Paket B</h2>
+                                <h2 className="pk-paket">Individu - Paket B</h2>
                                 <h4 className="pk-malam"> / 2 hari 1 malam</h4>
                                 <h4 className="pk-start">Start From :</h4>
                                 <h3 className="pk-harga">Rp 1.500.000,- /orang</h3>
@@ -38,12 +38,12 @@ class PopularPackage extends Component {
                     </div>
 
                     <div className="pk-card">
-                        <div className="pk-imgBx" data-text="Outbond">
+                        <div className="pk-imgBx" data-text="Paket/Group">
                             <FaTram className="pk-icon"/>
                         </div>
                         <div className="pk-content">
                             <div>
-                                <h2 className="pk-paket">Outbond & Gathering - Paket F</h2>
+                                <h2 className="pk-paket">Paket/Group - Paket F</h2>
                                 <h4 className="pk-malam"> / 2 hari 1 malam</h4>
                                 <h4 className="pk-start">Start From :</h4>
                                 <h3 className="pk-harga">Rp 1.050.000,- /orang</h3>
@@ -55,12 +55,12 @@ class PopularPackage extends Component {
                     </div>
 
                     <div className="pk-card">
-                        <div className="pk-imgBx" data-text="HoneyMoon">
+                        <div className="pk-imgBx" data-text="Corporate">
                             <FaRing className="pk-icon"/>
                         </div>
                         <div className="pk-content">
                             <div>
-                                <h2 className="pk-paket">HoneyMoon - Paket C</h2>
+                                <h2 className="pk-paket">Corporate - Paket C</h2>
                                 <h4 className="pk-malam"> / 3 hari 2 malam</h4>
                                 <h4 className="pk-start">Start From :</h4>
                                 <h3 className="pk-harga">Rp 3.500.000,- /orang</h3>
@@ -72,12 +72,12 @@ class PopularPackage extends Component {
                     </div>
 
                     <div className="pk-card">
-                        <div className="pk-imgBx" data-text="Valuable">
+                        <div className="pk-imgBx" data-text="Private Tour">
                             <FaWallet className="pk-icon"/>
                         </div>
                         <div className="pk-content">
                             <div>
-                                <h2 className="pk-paket">Valuable - Paket A</h2>
+                                <h2 className="pk-paket">Private Tour - Paket A</h2>
                                 <h4 className="pk-malam"> / 1 hari </h4>
                                 <h4 className="pk-start">Start From :</h4>
                                 <h3 className="pk-harga">Rp 450.000,- /orang</h3>

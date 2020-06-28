@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Tab, Row, Col, Nav } from 'react-bootstrap';
 
 import PopHotel from './pophotel/PopHotel';
+
 
 //style
 import './Popularhotel.css';
@@ -28,9 +28,9 @@ class PopularHotel extends Component {
 
     render() {
             const hotel=[
-            { "id": 1, "url": " ", "title": "CAMPER"},
-            { "id": 2, "url": " ", "title": "GLAMCAMP"},
-            { "id": 3, "url": " ", "title": "HOMESTAY"}
+            { "id": 1, "url": " ", "title": "CAMPER","event": "/PopularDestination"},
+            { "id": 2, "url": " ", "title": "GLAMCAMP","event": "dua"},
+            { "id": 3, "url": " ", "title": "HOMESTAY","event": "tiga"}
            ];
         return (
             <Fragment>

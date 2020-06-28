@@ -82,7 +82,7 @@
 
 .hocontainer .hobox:hover .hoicon .hotitle
 {
-    top: 50px;
+    top: 40%;
     transition: 0.5s ease-in-out;
 }
 
@@ -175,7 +175,7 @@
     }
     .hocontainer .hobox:hover .hoicon .hotitle
     {
-        top: 30px;
+        top: 35%;
     }
     .hocontainer .hobox:hover .hocontent
     {

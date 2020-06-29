@@ -12,7 +12,7 @@ import './Popularhotel.css';
 class PopularHotel extends Component {
      state = {
          hotel: [],
-     }
+     };
 
    /*  getPostAPI = () => {
         API.getNewPopLandmark().then(result => {
@@ -28,7 +28,7 @@ class PopularHotel extends Component {
 
     render() {
             const hotel=[
-            { "id": 1, "url": " ", "title": "CAMPER","event": "/PopularDestination"},
+            { "id": 1, "url": " ", "title": "CAMPER","event": "satu"},
             { "id": 2, "url": " ", "title": "GLAMCAMP","event": "dua"},
             { "id": 3, "url": " ", "title": "HOMESTAY","event": "tiga"}
            ];
@@ -42,7 +42,7 @@ class PopularHotel extends Component {
                 <div className="hocontainer">
                         {
                             hotel.map(ho => {
-                            return  <PopHotel key={ho.id} data={ho}/>    
+                            return  <PopHotel key={ho.id} data={ho}/>
                         })
                         }
                 </div>

@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 
 const PopHotel = (props) => {
     return (
             <div className="hobox">
-                <Link to="#">
                 <img className="hofoto" src={props.data.url} />
                 <div className="hoicon">
                     <h2 className="hotitle">{props.data.title}</h2>
@@ -13,7 +12,6 @@ const PopHotel = (props) => {
                 <div className="hocontent">
                     <p className="hotxt"></p>
                 </div>
-                </Link>
             </div>
     );
 }

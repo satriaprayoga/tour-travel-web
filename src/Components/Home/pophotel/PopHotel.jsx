@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-
-const PopHotel = (props) => {
+export const PopHotel = (props) => {
     return (
             <div className="hobox">
                 <img className="hofoto" src={props.data.url} />
@@ -15,5 +15,4 @@ const PopHotel = (props) => {
             </div>
     );
 }
-
 export default PopHotel;

@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import SearchBookForm from './SearchBookForm';
 
 export class Homestay extends Component {
     continuehome = e => {
@@ -31,6 +33,11 @@ export class Homestay extends Component {
                     <p className="hotxt"></p>
                 </div>
                 </div>
+
+                <div>
+                    <SearchBookForm />
+                    <button className="form-control btn btn-danger" onClick={this.backhome}>Back</button>
+                </div>
                 </div>
 
             {/* <div className="form-container">
@@ -51,9 +58,9 @@ export class Homestay extends Component {
                 <br /> */}
 
                 {/* <div className="row"> */}
-                    <div className="text-center">
+                    {/* <div className="text-center">
                         <button className="btn btn-danger" onClick={this.backhome}>Back</button>
-                    </div>
+                    </div> */}
                 {/* </div> */}
             </div>
             // </div>

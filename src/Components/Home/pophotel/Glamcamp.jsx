@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import SearchBookForm from './SearchBookForm';
 
 export class Glamcamp extends Component {
     continueglam = e => {
@@ -33,6 +35,12 @@ export class Glamcamp extends Component {
                     <p className="hotxt"></p>
                 </div>
                 </div>
+                
+
+                <div>
+                <SearchBookForm />
+                <button className="form-control btn btn-danger" onClick={this.backglam}>Back</button>
+                </div>
                 </div>
 
             {/* <div className="form-container">
@@ -48,9 +56,9 @@ export class Glamcamp extends Component {
 
                 <br /><br /> */}
 
-                    <div className="text-center">
+                    {/* <div className="text-center">
                         <button className="btn btn-danger" onClick={this.backglam}>Back</button>
-                    </div>
+                    </div> */}
             </div>
             // </div>
         )

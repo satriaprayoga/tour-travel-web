@@ -43,7 +43,7 @@ export class SearchBookForm extends Component {
                     </div>
 
                     <div className="input-grp">
-                    <button class="form-control btn btn-primary" href="#">Search</button>
+                    <button class="form-control btn btn-info" href="#">Search</button>
                     </div>
                     
                 </div>

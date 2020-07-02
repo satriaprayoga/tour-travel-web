@@ -183,7 +183,8 @@
 /* screen */
 @media (max-width: 900px)
 {
-    .hocontainer
+    .hocontainer,
+    .hocontainerglam
     {
         width: 450px;
         margin-top: 30px;
@@ -191,7 +192,8 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .hocontainer .hobox:nth-child(3)
+    .hocontainer .hobox:nth-child(3),
+    .hocontainerglam .hoboxglam:nth-child(3)
     {
         top: 0px;
         left: 0%;
@@ -200,11 +202,13 @@
 
 @media (max-width: 450px)
 {
-    .hocontainer
+    .hocontainer,
+    .hocontainerglam
     {
         width: 400px;
     }
-    .hocontainer .hobox
+    .hocontainer .hobox,
+    .hocontainerglam .hoboxglam
     {
         width: calc(400px - 30px);
     }
@@ -212,16 +216,19 @@
 
 @media (max-width: 400px)
 {
-    .hocontainer
+    .hocontainer,
+    .hocontainerglam
     {
         width: 350px;
     }
-    .hocontainer .hobox
+    .hocontainer .hobox,
+    .hocontainerglam .hoboxglam
     {
         width: calc(350px - 30px);
         height: calc(230px - 30px);
     }
-    .hocontainer .hobox .hocontent .hotxt
+    .hocontainer .hobox .hocontent .hotxt,
+    .hocontainerglam .hoboxglam .hocontent .hotxt
     {
         font-size: 14px;
     }
@@ -229,28 +236,34 @@
 
 @media (max-width: 350px)
 {
-    .hocontainer
+    .hocontainer,
+    .hocontainerglam
     {
         width: 300px;
     }
-    .hocontainer .hobox
+    .hocontainer .hobox,
+    .hocontainerglam .hoboxglam
     {
         width: calc(300px - 30px);
         height: calc(180px - 30px);
     }
-    .hocontainer .hobox .hoicon .hotitle
+    .hocontainer .hobox .hoicon .hotitle,
+    .hocontainerglam .hoboxglam .hoicon .hotitle
     {
         font-size: 36px;
     }
-    .hocontainer .hobox:hover .hoicon .hotitle
+    .hocontainer .hobox:hover .hoicon .hotitle,
+    .hocontainerglam .hoboxglam:hover .hoicon .hotitle
     {
         top: 35%;
     }
-    .hocontainer .hobox:hover .hocontent
+    .hocontainer .hobox:hover .hocontent,
+    .hocontainerglam .hoboxglam:hover .hocontent
     {
         top: 40px;
     }
-    .hocontainer .hobox .hocontent .hotxt
+    .hocontainer .hobox .hocontent .hotxt,
+    .hocontainerglam .hoboxglam .hocontent .hotxt
     {
         font-size: 12px;
     }

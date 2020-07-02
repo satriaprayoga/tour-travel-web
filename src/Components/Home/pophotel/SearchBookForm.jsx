@@ -11,8 +11,8 @@ export class SearchBookForm extends Component {
         return (
             <div className="bofbox">
                 <div className="bof">
-                    <label className="boftitle"><FaSearch className="boficon"/>Destination or Property</label>
-                    <input type="text" class="form-control" placeholder="Enter a Destination or Property" />
+                    {/* <label className="boftitle"><FaSearch className="boficon"/>Destination or Property</label>
+                    <input type="text" class="form-control" placeholder="Enter a Destination or Property" /> */}
                     
                     <div class="input-grp">
                     <label className="boftitle"><FaSearch className="boficon"/>Type Property</label>

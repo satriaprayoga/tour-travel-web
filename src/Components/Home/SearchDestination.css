@@ -1,17 +1,15 @@
 .secontainer
 {
     position: relative;
-    width: 900px;
-    height: 600px;
-    margin : 10px auto 0px;
+    width: 750px;
+    height: 400px;
+    margin : 100px auto 0px;
     align-content: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .inputgrp
 {
-    margin: -50px auto auto 100px;
+    margin: 0px auto auto 0px;
 }
 
 .btnsearch
@@ -24,6 +22,7 @@
 .searchform
 {
     margin: 0;
-    padding: 0;
-    width: 600px;
+    padding: 0 0 0 20px;
+    width: 400px;
+    font-size: 18px;
 }

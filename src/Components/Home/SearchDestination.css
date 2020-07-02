@@ -1,0 +1,29 @@
+.secontainer
+{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin : 10px auto 0px;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.inputgrp
+{
+    margin: -50px auto auto 100px;
+}
+
+.btnsearch
+{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+
+.searchform
+{
+    margin: 0;
+    padding: 0;
+    width: 600px;
+}

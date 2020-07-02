@@ -32,7 +32,7 @@ class PopularPackage extends Component {
                                 <h3 className="pk-harga">Rp 1.500.000,- /orang</h3>
                                 <h4 className="pk-orang">min.2 orang</h4>
                                 <p className="pk-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,</p>
-                                <a href="#">Read More</a>
+                                <a href="#">Search</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ class PopularPackage extends Component {
                                 <h3 className="pk-harga">Rp 1.050.000,- /orang</h3>
                                 <h4 className="pk-orang">min.2 orang</h4>
                                 <p className="pk-desc">Lorem ipsum dolor sit amet consectetur</p>
-                                <a href="#">Read More</a>
+                                <a href="#">Search</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ class PopularPackage extends Component {
                                 <h3 className="pk-harga">Rp 3.500.000,- /orang</h3>
                                 <h4 className="pk-orang">min.2 orang</h4>
                                 <p className="pk-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,</p>
-                                <a href="#">Read More</a>
+                                <a href="#">Search</a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ class PopularPackage extends Component {
                                 <h3 className="pk-harga">Rp 450.000,- /orang</h3>
                                 <h4 className="pk-orang">min.2 orang</h4>
                                 <p className="pk-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,</p>
-                                <a href="#">Read More</a>
+                                <a href="#">Search</a>
                             </div>
                         </div>
                     </div>

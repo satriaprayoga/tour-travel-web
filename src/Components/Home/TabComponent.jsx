@@ -12,6 +12,7 @@ import PopularPackage from './PopularPackage';
 import ComingSoon from './ComingSoon';
 import Testimoni from './Testimoni';
 import HotelStep from'./HotelStep';
+import SearchStep from'./SearchStep';
 
 import './TabComponent.css';
 
@@ -40,7 +41,7 @@ class TabComponent extends Component {
                         </Tab> */}
                     </TabList>
                     <TabPanel>
-                        <HotelStep />
+                        <SearchStep />
                     </TabPanel>
                     <TabPanel>
                         <PopularPackage />

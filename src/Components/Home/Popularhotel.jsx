@@ -45,6 +45,11 @@ class PopularHotel extends Component {
         this.props.nextStephome();
     };
 
+    continuese = e => {
+        e.preventDefault();
+        this.props.nextStepse();
+    };
+
     render() {
             const hotel=[
             { "id": 1, "url": " ", "title": "CAMPER","event": "0"},

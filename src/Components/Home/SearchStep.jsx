@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PopularHotel from './Popularhotel';
 import SearchDestination from './SearchDestination';
+import Camper from './pophotel/Camper';
+import Glamcamp from './pophotel/Glamcamp';
+import Homestay from './pophotel/Homestay';
 
 export class SearchStep extends Component {
     state = {
@@ -14,6 +17,36 @@ export class SearchStep extends Component {
         github: ''
     };
 
+    nextStep = () => {
+        const { step } = this.state;
+        this.setState({ step: step + 1 });
+    };
+
+    prevStep = () => {
+        const { step } = this.state;
+        this.setState({ step: step - 1 });
+    };
+
+    nextStepglam = () => {
+        const { step } = this.state;
+        this.setState({ step: step + 2 });
+    };
+
+    prevStepglam = () => {
+        const { step } = this.state;
+        this.setState({ step: step - 2 });
+    };
+
+    nextStephome = () => {
+        const { step } = this.state;
+        this.setState({ step: step + 3 });
+    };
+
+    prevStephome = () => {
+        const { step } = this.state;
+        this.setState({ step: step - 3 });
+    };
+
     nextStepse = () => {
         const { step } = this.state;
         this.setState({ step: step + 1 });
@@ -22,6 +55,12 @@ export class SearchStep extends Component {
     prevStepse = () => {
         const { step } = this.state;
         this.setState({ step: step - 1 });
+    };
+
+    inputChange = input => e => {
+        this.setState({
+            [input]: e.target.value
+        });
     };
 
     render() {
@@ -40,11 +79,37 @@ export class SearchStep extends Component {
             case 2:
                 return (
                     <PopularHotel
-                        prevStepse={this.prevStepse}
-                        inputChange={this.inputChange}
-                        values={values}
+                    nextStep={this.nextStep}
+                    nextStepglam={this.nextStepglam}
+                    nextStephome={this.nextStephome}
+                    inputChange={this.inputChange}
+                    values={values}
                     />
                 );
+            case 3:
+                    return (
+                        <Camper
+                            prevStep={this.prevStep}
+                            inputChange={this.inputChange}
+                            values={values}
+                        />
+                    );
+            case 4:
+                    return (
+                        <Glamcamp
+                            prevStepglam={this.prevStepglam}
+                            inputChange={this.inputChange}
+                            values={values}
+                        />
+                    );
+            case 5:
+                    return (
+                        <Homestay
+                            prevStephome={this.prevStephome}
+                            inputChange={this.inputChange}
+                            values={values}
+                        />
+                    );
         }
     }
 }

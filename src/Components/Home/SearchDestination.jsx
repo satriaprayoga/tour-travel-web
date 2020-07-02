@@ -31,6 +31,7 @@ class SearchDestination extends Component {
     componentDidMount (){
         this.getPostAPI();
     } */
+    
     continuese = e => {
         e.preventDefault();
         this.props.nextStepse();
@@ -57,7 +58,19 @@ class SearchDestination extends Component {
                 <div className="secontainer">
                 <InputGroup className="inputgrp">
                 <Button onClick={this.continuese} className="btnsearch" variant="info"><FaSearch /></Button>
-                <FormControl className="searchform" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="Insert the Destinations" />
+                <select className="form-control searchform" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="Insert the Destinations" >
+                Insert the Destinations
+                <option>Destinations 1</option>
+                    <option >Destinations 2</option>
+                    <option >Destinations 3</option>
+                    <option >Destinations 4</option>
+                    <option >Destinations 5</option>
+                    <option >Destinations 6</option>
+                    <option >Destinations 7</option>
+                    <option >Destinations 8</option>
+                    <option >Destinations 9</option>
+                    <option >Destinations 10</option>
+                    </select>
                 </InputGroup>
                 </div>
             </div>

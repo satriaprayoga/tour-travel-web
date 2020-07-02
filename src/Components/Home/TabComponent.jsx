@@ -6,9 +6,13 @@ import TabPopPackage from './tabs_nav/TabPopPackage';
 import TabPopReview from './tabs_nav/TabPopReview';
 
 import PopularDestination from './Populardestination';
+import PopularHotel from './Popularhotel';
 import PopularLandmark from './PopularLandmark';
 import PopularPackage from './PopularPackage';
+import ComingSoon from './ComingSoon';
 import Testimoni from './Testimoni';
+import HotelStep from'./HotelStep';
+import SearchStep from'./SearchStep';
 
 import './TabComponent.css';
 
@@ -32,22 +36,22 @@ class TabComponent extends Component {
                         <Tab className={`${this.state.tabIndex === 2 ? 'tab-selected active' : null}`}>
                             <TabPopPackage />
                         </Tab>
-                        <Tab className={`${this.state.tabIndex === 3 ? 'tab-selected active' : null}`}>
+                        {/* <Tab className={`${this.state.tabIndex === 3 ? 'tab-selected active' : null}`}>
                             <TabPopReview />
-                        </Tab>
+                        </Tab> */}
                     </TabList>
                     <TabPanel>
-                        <PopularDestination />
-                    </TabPanel>
-                    <TabPanel>
-                        <PopularLandmark />
+                        <SearchStep />
                     </TabPanel>
                     <TabPanel>
                         <PopularPackage />
                     </TabPanel>
                     <TabPanel>
-                        <Testimoni />
+                        <ComingSoon />
                     </TabPanel>
+                    {/* <TabPanel>
+                        <Testimoni />
+                    </TabPanel> */}
                 </Tabs>
             </div>
         );

@@ -10,8 +10,9 @@
     text-align: center;
     margin: 30px 0;
     padding: 0;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
+    font-size: 3.5rem;
 }
 .sub-text
 {
@@ -131,7 +132,7 @@
 .pd-tags
 {
     position: relative;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .pd-tags .pd-tags-land
 {
@@ -172,18 +173,12 @@
         font-size: 12px;   
     }
 }
+
 @media (max-width: 524px)
 {
-    .pd-card .pd-poster::before
+    .pd-slider
     {
-        bottom: -85px;
-    }
-    .pd-details
-    {
-        bottom: -180px;
-    }
-    .pd-card:hover .pd-details
-    {
-        bottom: -50px;
+        width: 80%;
+        margin: auto;
     }
 }

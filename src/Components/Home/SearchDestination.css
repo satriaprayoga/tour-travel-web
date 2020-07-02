@@ -1,0 +1,77 @@
+.secontainer
+{
+    position: relative;
+    width: 750px;
+    height: 400px;
+    margin : 100px auto 0px;
+    align-content: center;
+}
+
+.inputgrp
+{
+    margin: 0px auto auto 0px;
+}
+
+.btnsearch
+{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+
+.searchform
+{
+    margin: 0;
+    padding: 0 0 0 20px;
+    width: 400px;
+    font-size: 18px;
+}
+
+@media (max-width: 776px)
+{
+    .secontainer
+    {
+        width: 600px;
+    }
+}
+
+@media (max-width: 630px)
+{
+    .secontainer
+    {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 520px)
+{
+    .secontainer
+    {
+        width: 450px;
+    }
+}
+
+@media (max-width: 460px)
+{
+    .secontainer
+    {
+        width: 400px;
+    }
+}
+
+@media (max-width: 415px)
+{
+    .secontainer
+    {
+        width: 350px;
+    }
+}
+@media (max-width: 365px)
+{
+    .secontainer
+    {
+        width: 320px;
+        height: 250px;
+    }
+}

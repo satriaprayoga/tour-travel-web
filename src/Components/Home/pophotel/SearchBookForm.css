@@ -1,0 +1,39 @@
+.bofbox
+{
+    max-width: 450px;
+    border: 1px solid #ced4da;
+}
+
+.boftitle
+{
+    color: white;
+    font-size: 18px;
+    padding: auto;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.boficon
+{
+    margin: 0px 5px 0px 5px;
+}
+
+.boftitledate
+{
+    color: white;
+    font-size: 18px;
+    padding: auto;
+    margin-top: 3px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.bofbtn
+{
+    color: white;
+    font-size: 18px;
+    padding: auto;
+    margin-top: 3px;
+    font-weight: bold;
+    width: 100%;
+}

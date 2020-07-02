@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+import { Link } from 'react-router-dom';
+
 //icon
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhone} from "react-icons/fa";
@@ -22,7 +24,7 @@ class Footer extends Component {
                 <div className="innerfooter">
 
                 <div className="footeritems">
-                <img className="footersatu" src={footerlogo} />
+                <Link to="/"><img className="footersatu" src={footerlogo} /></Link>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Doloribus quo similique modi dolores laborum quod iure 
                     quae eligendi</p>
@@ -32,10 +34,10 @@ class Footer extends Component {
                 <h2 className="footerdua">Quick Pages</h2>
                 <div className="footerborder"></div>
                 <div className="footerul">
-                    <a href =""><li>Home</li></a>
-                    <a href =""><li>Destination</li></a>
-                    <a href =""><li>Packages</li></a>
-                    <a href =""><li>Testimonial</li></a>
+                    <Link to="/"><li>Home</li></Link>
+                    <Link to="/"><li>Hotel</li></Link>
+                    <Link to="/"><li>Tour & Travel</li></Link>
+                    <Link to="/"><li>Investment</li></Link>
                 </div>
                 </div>
 

@@ -10,7 +10,7 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     list-style: none;
     margin: 0 12%;
@@ -58,4 +58,101 @@
 .active
 {
     border-bottom: 5px solid #32a3b1;
+}
+
+@media (max-width: 570px)
+{
+    .tab-icon-pd
+    {
+        width: 3rem;
+        height: 3rem;
+    }
+    .tab-icon-pl
+    {
+        width: 3rem;
+        height: 3rem;
+    }
+    .tab-icon-pp
+    {
+        width: 3rem;
+        height: 3rem;
+    }
+    .tab-icon-pr
+    {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .tab-icon-pd
+    {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .tab-icon-pl
+    {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .tab-icon-pp
+    {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .tab-icon-pr
+    {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .tabs-container
+    {
+        grid-gap: 0.5rem;
+        margin: 0 5% 5% -3%;
+    }
+    .tabs-box
+    {
+        font-size: 14px;
+    }
+}
+@media (max-width: 380px)
+{
+    .tab-icon-pd
+    {
+        width: 2rem;
+        height: 2rem;
+    }
+    .tab-icon-pl
+    {
+        width: 2rem;
+        height: 2rem;
+    }
+    .tab-icon-pp
+    {
+        width: 2rem;
+        height: 2rem;
+    }
+    .tab-icon-pr
+    {
+        width: 2rem;
+        height: 2rem;
+    }
+    .tabs-container
+    {
+        grid-gap: 0.2rem;
+        margin: 0 5% 5% -5%;
+    }   
+}
+
+@media (max-width: 330px)
+{
+    .tabs-container
+    {
+        margin: 0 3% 3% -8%;
+    }
+    .tabs-box
+    {
+        font-size: 12px;
+    }  
 }

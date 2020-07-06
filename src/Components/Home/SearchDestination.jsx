@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import AccountSetup from './pophotel/Camper';
 import Confirm from './pophotel/Glamcamp';
 import SocialProfiles from './pophotel/Homestay';
+import DestinationService from '../../Services/DestinationService';
 
 import PopHotel from './pophotel/PopHotel';
 
@@ -15,7 +16,59 @@ import './SearchDestination.css';
 //import API from '../services';
 
 class SearchDestination extends Component {
-     state = {
+    constructor(props){
+        super(props);
+        this.state={
+            destination:"",
+            landmark:"",
+            group:"",
+            destinations:[],
+            landmarks:[],
+            enable:false
+        }
+        this.handleChange=this.handleChange.bind(this);
+        this.handleClick=this.handleClick.bind(this);
+        this.loadDestinations=this.loadDestinations.bind(this);
+    }
+
+    componentDidMount(){
+        this.loadDestinations();
+    }
+
+    loadDestinations(){
+        DestinationService.all().then((resp)=>{
+            this.setState({
+                destinations:resp.data
+            })
+        })
+    }
+
+    handleChange(event){
+        this.setState({
+            [event.target.name]:[event.target.value]
+        });
+        switch(event.target.name){
+            case "destination":
+                localStorage.setItem("destCode",event.target.value);
+               
+                break;
+        }
+
+    }
+
+    handleClick(){
+        const {destination,landmark,group}=this.state;
+        const dest=destination===''?'':'dest='+destination;
+        const l=landmark===''?'':'&l='+landmark;
+        const g=group===''?'':'&g='+group;
+        const queryString=`${dest}${l}${g}`;
+       // console.log(queryString);
+        this.props.history.push(`/searchResult?${queryString}`);
+                             //this.props.history.push(`/searchResult?dest=${this.state.destination}&l=${this.state.landmark}&g=${this.state.group}`)
+      } 
+    
+    
+    state = {
          hotel: [],
          tabIndex: 0
      };
@@ -58,19 +111,15 @@ class SearchDestination extends Component {
                 <div className="secontainer">
                 <InputGroup className="inputgrp">
                 <Button onClick={this.continuese} className="btnsearch" variant="info"><FaSearch /></Button>
-                <select className="form-control searchform" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="Insert the Destinations" >
-                Insert the Destinations
-                <option>Destinations 1</option>
-                    <option >Destinations 2</option>
-                    <option >Destinations 3</option>
-                    <option >Destinations 4</option>
-                    <option >Destinations 5</option>
-                    <option >Destinations 6</option>
-                    <option >Destinations 7</option>
-                    <option >Destinations 8</option>
-                    <option >Destinations 9</option>
-                    <option >Destinations 10</option>
-                    </select>
+                <select className="form-control" name="destination" onChange={this.handleChange} value={this.state.destination}>
+                    <option value="" selected>Select destination</option>
+                        {
+                        this.state.destinations.map((d)=>(
+                        <option value={d.code} >{d.destination}</option>
+                                               
+                        ))
+                        }
+                </select>
                 </InputGroup>
                 </div>
             </div>

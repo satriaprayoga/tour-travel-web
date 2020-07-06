@@ -10,3 +10,4 @@ export const LANDMARK_URL=`${BASE_URL}:${BASE_PORT}/infosys-search/api/landmarks
 export const TOUR_URL=`${BASE_URL}:${BASE_PORT}/infosys-search/api/tours`;
 export const BOOKING_URL=`${BASE_URL}:${BASE_PORT}/infosys-webclient/api/bookings`;
 export const CUSTOMER_BOOKING_URL=`${BASE_URL}:${BASE_PORT}/infosys-webclient/api/customers/booking`;
+export const HOTEL_URL=`${BASE_URL}:${BASE_PORT}/infosys-search/api/hotels`;

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import './SearchResultContent.css';
+import './HotelSearchResultContent.css';
 import styled from 'styled-components';
 import { Table, Card, ListGroup, Button } from 'react-bootstrap';
-import SearchResultElement from './SearchResultElement';
 import { withRouter } from 'react-router-dom';
+import HotelSearchResultElement from './HotelSearchResultElement';
 
-const SearchResultContent = (props) => {
+const HotelSearchResultContent = (props) => {
     const queryParam=props.location.search;
     const ResultHeader = styled.section`
     display:flex;
@@ -16,34 +16,14 @@ const SearchResultContent = (props) => {
     background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
     url('${props.imageUrl}') no-repeat center center/cover;
     `
-
+  
     return (
         <Fragment>
             <ResultHeader>
                 <div className="result-content">
                     <h1 className="result-title">{props.data.destination}</h1>
                     <h3 className="result-subtitle">{props.data.location}</h3>
-                    <div className="result-info-container">
-                        <div className="result-info">
-                            <h1>Fact about Baluran Sabana Park</h1>
-                            <Table borderless>
-                                <tr>
-                                    <td>Provider</td>
-                                    <td>{props.data.company}</td>
-                                </tr>
-                                <tr>
-                                    <td>Contact</td>
-                                    <td>{props.data.email}</td>
-
-                                </tr>
-                                <tr>
-                                    <td>Landmarks</td>
-                                    <td>10 landmark</td>
-
-                                </tr>
-                            </Table>
-                        </div>
-                    </div>
+                    
                 </div>
             </ResultHeader>
             <div className="result-package">
@@ -51,8 +31,8 @@ const SearchResultContent = (props) => {
                 <div className="result-line"></div>
                 <div className="result-package-list">
                   {
-                      props.tours.map((t)=>(
-                        <SearchResultElement data={t}/>
+                      props.hotels.map((t)=>(
+                        <HotelSearchResultElement data={t}/>
                       ))
                   }
                 </div>
@@ -61,4 +41,4 @@ const SearchResultContent = (props) => {
     )
 }
 
-export default withRouter(SearchResultContent);
+export default withRouter(HotelSearchResultContent);

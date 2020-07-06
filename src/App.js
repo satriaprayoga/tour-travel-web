@@ -17,6 +17,8 @@ import NotFound from './Pages/NotFound';
 import SignIn from './Pages/Login/SignIn';
 import BookingAvailable from './Components/Booking/BookingAvailable';
 import Customer from './Pages/Customer/Customer';
+import HotelSearchResult from './Components/Home/HotelSearchResult';
+import HotelResult from './Pages/Search/HotelResult';
 
 class App extends React.Component{
   constructor(props){
@@ -72,6 +74,7 @@ class App extends React.Component{
               <Route path="/activate/:id" component={Activation}></Route>
               <Route path="/searchPackages" component={SearchPackage}></Route>
               <Route path="/searchResult" render={(props) => <SearchResult  {...props} />}></Route>
+              <Route path="/hotelResult" render={(props) => <HotelResult  {...props} />}></Route>
               <Route path="/check" component={BookingAvailable}></Route>
               <PrivateRoute path="/booking" authenticated={this.isLogin()} component={BookingStep} currentUser={this.state.currentUser}/>
               <PrivateRoute path="/customer" authenticated={this.isLogin()} component={Customer} currentUser={this.state.currentUser}/>

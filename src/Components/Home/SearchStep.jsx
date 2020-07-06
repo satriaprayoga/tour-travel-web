@@ -4,6 +4,8 @@ import SearchDestination from './SearchDestination';
 import Camper from './pophotel/Camper';
 import Glamcamp from './pophotel/Glamcamp';
 import Homestay from './pophotel/Homestay';
+import HotelSearchResult from './HotelSearchResult';
+import SelectedType from './pophotel/SelectedType';
 
 export class SearchStep extends Component {
     state = {
@@ -78,7 +80,7 @@ export class SearchStep extends Component {
                 );
             case 2:
                 return (
-                    <PopularHotel
+                    <HotelSearchResult
                     nextStep={this.nextStep}
                     nextStepglam={this.nextStepglam}
                     nextStephome={this.nextStephome}
@@ -88,11 +90,7 @@ export class SearchStep extends Component {
                 );
             case 3:
                     return (
-                        <Camper
-                            prevStep={this.prevStep}
-                            inputChange={this.inputChange}
-                            values={values}
-                        />
+                        <SelectedType prevStep={this.prevStep}/>
                     );
             case 4:
                     return (

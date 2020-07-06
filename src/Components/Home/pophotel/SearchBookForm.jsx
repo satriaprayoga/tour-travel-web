@@ -2,8 +2,24 @@ import React, { Component } from 'react';
 import { FaSearch, FaSuitcaseRolling, FaBusinessTime, FaUsers, FaChild} from 'react-icons/fa';
 
 import './SearchBookForm.css';
+import { withRouter } from 'react-router-dom';
 
 export class SearchBookForm extends Component {
+    constructor(props){
+        super(props);
+        this.handleClick=this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+        e.preventDefault();
+        const {destination,selectedType}=this.props;
+        const dest=destination===''?'':'dest='+destination;
+        const g=selectedType===''?'':'&g='+selectedType;
+        const queryString=`${dest}${g}`;
+       // console.log(queryString);
+        this.props.history.push(`/hotelResult?${queryString}`);
+                             //this.props.history.push(`/searchResult?dest=${this.state.destination}&l=${this.state.landmark}&g=${this.state.group}`)
+      }
 
     render() {
         const { values, inputChange } = this.props;
@@ -16,8 +32,8 @@ export class SearchBookForm extends Component {
                     
                     <div class="input-grp">
                     <label className="boftitle"><FaSearch className="boficon"/>Type Property</label>
-                    <select class="form-control">
-                    <option >Type Property1</option>
+                    <select class="form-control" disabled>
+                    <option selected>{this.props.selectedType}</option>
                     <option >Type Property2</option>
                     <option >Type Property3</option>
                     <option >Type Property4</option>
@@ -43,7 +59,7 @@ export class SearchBookForm extends Component {
                     </div>
 
                     <div className="input-grp">
-                    <button class="form-control btn btn-info" href="#">Search</button>
+                    <button class="form-control btn btn-info" onClick={(e)=>this.handleClick(e)}>Search</button>
                     </div>
                     
                 </div>
@@ -52,4 +68,4 @@ export class SearchBookForm extends Component {
         }
     }
     
-export default SearchBookForm
+export default withRouter(SearchBookForm)

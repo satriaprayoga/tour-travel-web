@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
-class BillingInfo extends React.Component{
+class HotelBillingInfo extends React.Component{
     constructor(props){
         super(props);
         this.updateBooking=this.updateBooking.bind(this);
@@ -157,4 +157,4 @@ class BillingInfo extends React.Component{
     }
 }
 
-export default withRouter(BillingInfo);
+export default withRouter(HotelBillingInfo);

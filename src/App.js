@@ -19,6 +19,11 @@ import BookingAvailable from './Components/Booking/BookingAvailable';
 import Customer from './Pages/Customer/Customer';
 import HotelSearchResult from './Components/Home/HotelSearchResult';
 import HotelResult from './Pages/Search/HotelResult';
+import HotelBookingStep from './Components/Hotel/HotelBookingStep';
+
+import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
 
 class App extends React.Component{
   constructor(props){
@@ -66,7 +71,7 @@ class App extends React.Component{
   render(){
     return (
       <div>
-       
+        <ToastContainer />
         <Switch>
               <Route path="/login" render={(props) => <SignIn isAuthenticated={this.isLogin()} {...props} />}></Route>
               <Route path="/register" component={Register}></Route>
@@ -77,6 +82,7 @@ class App extends React.Component{
               <Route path="/hotelResult" render={(props) => <HotelResult  {...props} />}></Route>
               <Route path="/check" component={BookingAvailable}></Route>
               <PrivateRoute path="/booking" authenticated={this.isLogin()} component={BookingStep} currentUser={this.state.currentUser}/>
+              <PrivateRoute path="/hotelBooking" authenticated={this.isLogin()} component={HotelBookingStep} currentUser={this.state.currentUser}/>
               <PrivateRoute path="/customer" authenticated={this.isLogin()} component={Customer} currentUser={this.state.currentUser}/>
               <Route path="/booking_confirm" component={Booking}></Route>
               <Redirect from='/registerSuccess/' to='/' exact />

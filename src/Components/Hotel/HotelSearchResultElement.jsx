@@ -6,7 +6,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 const HotelSearchResultElement = (props) => {
     function handleClick(){
-        props.history.push(`/booking/?id=${props.data.id}`)
+        props.history.push(`/hotelBooking/?id=${props.data.id}`)
         BookingService.setStatus("create")
     }
     return (

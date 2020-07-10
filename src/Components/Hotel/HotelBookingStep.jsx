@@ -1,23 +1,21 @@
 import React from 'react';
-import './BookingStep.css'
-import logo from '../../assets/logobig.png'
-import BookingInfo from './Steps/BookingInfo';
+import './HotelBookingStep.css';
+import logo from '../../assets/logobig.png';
 import { Link, Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import qs from 'qs';
-import * as Yup from 'yup';
-import PaymentInfo from './Steps/PaymentInfo';
-
-import DestinationService from '../../Services/DestinationService';
-import BookingDetails from './Steps/BookingDetails';
 import { Formik } from 'formik';
-import BookingWizard from './BookingWizard';
-import BillingInfo from './Steps/BillingInfo';
-import BookingAvailable from './Steps/BookingAvailable';
-import BookingConfirm from './Steps/BookingConfirm';
+import * as Yup from 'yup';
+import HotelPaymentInfo from './Steps/HotelPaymentInfo';
+import HotelBookingDetails from './Steps/HotelBookingDetails';
+import HotelService from '../../Services/HotelService';
 import BookingService from '../../Services/BookingService';
+import HotelAvailable from './Steps/HotelAvailable';
+import HotelBookingWizard from './HotelBookingWizard';
+import HotelBillingInfo from './Steps/HotelBillingInfo';
+import HotelBookingConfirm from './Steps/HotelBookingConfirm';
 import { toast } from 'react-toastify';
 
-class BookingStep extends React.Component {
+class HotelBookingStep extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,17 +26,24 @@ class BookingStep extends React.Component {
         this._navigateNext = this._navigateNext.bind(this);
         this._renderPage = this._renderPage.bind(this);
 
-        this.saveBooking=this.saveBooking.bind(this);
+        this.saveBooking = this.saveBooking.bind(this);
     }
+
+    dateDiffInDays(date1, date2) {
+        var dt1 = new Date(date1);
+        var dt2 = new Date(date2);
+        return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) / (1000 * 60 * 60 * 24));
+    }
+
     componentDidMount() {
         const params = qs.parse(this.props.location.search);
         const id = params['?id'];
+        console.log(this.props.currentUser);
         if (id) {
-            DestinationService.tourById(id).then((resp) => {
-                console.log(resp.data);
+            HotelService.hotelById(id).then((resp) => {
                 this.setState({
                     pkg: resp.data
-                });
+                })
             }).catch((err) => {
                 console.log(err);
                 this.props.history.push('/');
@@ -47,34 +52,34 @@ class BookingStep extends React.Component {
             this.props.history.push('/');
         }
     }
-
-    saveBooking(values){
-        const currentUser=this.props.currentUser;
+    saveBooking(values) {
+        const {currentUser} = this.props;
         const cIn = values.checkIn;
-        const cOut=values.checkOut;
-        const inDate = (cIn.getDate() < 10 ? `0${cIn.getDate()}` : `${cIn.getDate()}`)+"-"+ (cIn.getMonth() + 1 <= 10 ? `0${cIn.getMonth() + 1}` : `${cIn.getMonth() + 1}`)+"-"+cIn.getFullYear();
-        const outDate= (cOut.getDate() < 10 ? `0${cOut.getDate()}` : `${cOut.getDate()}`)+"-"+ (cOut.getMonth() + 1 <= 10 ? `0${cOut.getMonth() + 1}` : `${cOut.getMonth() + 1}`)+"-"+cOut.getFullYear();
-        let request={
-            customerId:currentUser.id,
-            destination:this.state.pkg.destination,
-            packageGroup:this.state.pkg.group,
-            packageId:this.state.pkg.id,
-            packageName:this.state.pkg.name,
-            checkin:inDate,
-            checkout:outDate,
-            name:values.name,
-            email:values.email,
-            phone:values.phone,
-            billingAddress:`${values.address} ${values.city},${values.state}, ${values.country}`,
-            adults:values.person,
-            children:0,
+        const cOut = values.checkOut;
+        const inDate = (cIn.getDate() < 10 ? `0${cIn.getDate()}` : `${cIn.getDate()}`) + "-" + (cIn.getMonth() + 1 <= 10 ? `0${cIn.getMonth() + 1}` : `${cIn.getMonth() + 1}`) + "-" + cIn.getFullYear();
+        const outDate = (cOut.getDate() < 10 ? `0${cOut.getDate()}` : `${cOut.getDate()}`) + "-" + (cOut.getMonth() + 1 <= 10 ? `0${cOut.getMonth() + 1}` : `${cOut.getMonth() + 1}`) + "-" + cOut.getFullYear();
+        const days=this.dateDiffInDays(cIn,cOut);
+        let request = {
+            customerId: currentUser.id,
+            destination: this.state.pkg.destination,
+            packageGroup: this.state.pkg.hotelGroup,
+            packageId: this.state.pkg.id,
+            packageName: this.state.pkg.name,
+            checkin: inDate,
+            checkout: outDate,
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            billingAddress: `${values.address} ${values.city},${values.state}, ${values.country}`,
+            adults:values.adults,
+            children:values.children,
             capacity: this.state.pkg.capacity,
-            day:this.state.pkg.day,
-            night:this.state.pkg.night,
-            grossAmount:values.person*values.basePrice
+            day: days,
+            night: days-1,
+            grossAmount: (values.adults + values.children) * values.basePrice* days
         }
         console.log(request);
-        BookingService.initBook(request).then((resp)=>{
+        BookingService.initBook(request).then((resp) => {
             console.log(resp.data.response);
             let payment={
                 bookingCode:resp.data.response.code,
@@ -85,10 +90,7 @@ class BookingStep extends React.Component {
                 console.log(resp.data.response);
                 this.props.history.push("/");
             })
-        })
-    }
-    componentWillUnmount(){
-        window.localStorage.clear();
+        });
     }
 
     render() {
@@ -100,13 +102,14 @@ class BookingStep extends React.Component {
                     <Link to="/"><img className="booking-logo" src={logo} alt="logo" /></Link>
                 </div>
                 <div className="step-container">
-                    <BookingWizard pages={[BookingAvailable, BillingInfo, PaymentInfo, BookingConfirm]}>
+                    <HotelBookingWizard pages={[HotelAvailable, HotelBillingInfo, HotelPaymentInfo, HotelBookingConfirm]}>
                         {
                             wizProps => (
                                 <div>
                                     <Formik
                                         initialValues={{
-                                            person: minOrder,
+                                            adults: 0,
+                                            children: 0,
                                             checkIn: today,
                                             checkOut: today,
                                             basePrice: price,
@@ -117,15 +120,17 @@ class BookingStep extends React.Component {
                                             state: '',
                                             country: '',
                                             method: '',
-                                            address:''
+                                            address: ''
                                         }}
                                         enableReinitialize={true}
                                         validationSchema={
                                             Yup.object().shape({
-                                                person: Yup.number()
+                                                adults: Yup.number()
                                                     .min(minOrder, 'Minumum Order Exceeded')
                                                     .max(capacity, 'Maximum Order Exceeded')
                                                     .required('Required'),
+                                                children: Yup.number()
+                                                    .min(0, 'Minumum Order Exceeded'),
                                                 checkIn: Yup.date()
                                                     .min(today, 'Minimum date is today')
                                                     .required("Required"),
@@ -138,7 +143,7 @@ class BookingStep extends React.Component {
                                                 city: Yup.string().required('address is required'),
                                                 state: Yup.string().required('address is required'),
                                                 country: Yup.string().required('address is required'),
-                                                address:Yup.string().required('address is required')
+                                                address: Yup.string().required('address is required')
                                             })
                                         }
                                         onSubmit={(values, { setSubmitting }) => {
@@ -163,7 +168,7 @@ class BookingStep extends React.Component {
                                 </div>
                             )
                         }
-                    </BookingWizard>
+                    </HotelBookingWizard>
                 </div>
             </div>
 
@@ -172,15 +177,16 @@ class BookingStep extends React.Component {
 
     _navigateBack = () => {
         this.setState(prevState => ({
-            pageIndex: prevState.pageIndex <= 1 ? 1: prevState.pageIndex - 1
-           
+            pageIndex: prevState.pageIndex < 1 ? 1 : prevState.pageIndex - 1
+
         }));
-       
+        console.log(this.state.pageIndex);
+
     };
 
     _navigateNext = () => {
         this.setState(prevState => ({
-            pageIndex: prevState.pageIndex >=2? 3: prevState.pageIndex+1
+            pageIndex: prevState.pageIndex >= 2 ? 3 : prevState.pageIndex + 1
         }));
         console.log(this.state.pageIndex);
     };
@@ -188,10 +194,10 @@ class BookingStep extends React.Component {
     _renderPage(props) {
         const { pageIndex } = this.state;
         const pageHash = {
-            0: BookingDetails,
-            1:BillingInfo,
-            2: PaymentInfo,
-            3:BookingConfirm
+            0: HotelAvailable,
+            1: HotelBillingInfo,
+            2: HotelPaymentInfo,
+            3: HotelBookingConfirm
         };
 
         const Page = pageHash[pageIndex];
@@ -205,7 +211,7 @@ class BookingStep extends React.Component {
             />
         );
     }
+
 }
 
-
-export default withRouter(BookingStep);
+export default withRouter(HotelBookingStep);

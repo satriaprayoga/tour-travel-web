@@ -20,12 +20,19 @@ class PaymentInfo extends React.Component {
         window.localStorage.setItem(id, JSON.stringify(values));
     }
 
+    dateDiffInDays(date1, date2) {
+        var dt1 = new Date(date1);
+        var dt2 = new Date(date2);
+        return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate())) / (1000 * 60 * 60 * 24));
+    }
+
     render() {
-        const currentPerson = this.props.values.person;
+        const currentPerson = this.props.values.adults+this.props.values.children;
         const currentCheckIn = new Date(this.props.values.checkIn);
         const currentCheckOut = new Date(this.props.values.checkOut);
         //currentCheckIn.setDate();
-        const grossAmount = currentPerson * this.props.values.basePrice;
+        const days=this.dateDiffInDays(currentCheckIn,currentCheckOut);
+        const grossAmount = currentPerson * this.props.values.basePrice*days;
         const ppn = 0;
         const totalAmount = grossAmount + ppn;
         return (

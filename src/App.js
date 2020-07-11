@@ -24,6 +24,8 @@ import HotelBookingStep from './Components/Hotel/HotelBookingStep';
 import { ToastContainer, toast } from 'react-toastify';
 
   import 'react-toastify/dist/ReactToastify.css';
+import About from './Pages/Home/About';
+import Faq from './Pages/Home/Faq';
 
 class App extends React.Component{
   constructor(props){
@@ -76,6 +78,8 @@ class App extends React.Component{
               <Route path="/login" render={(props) => <SignIn isAuthenticated={this.isLogin()} {...props} />}></Route>
               <Route path="/register" component={Register}></Route>
               <Route path="/registerSuccess/:id" component={RegistrationSuccess}></Route>
+              <Route path="/about" component={About}></Route>
+              <Route path="/faq" component={Faq}></Route>
               <Route path="/activate/:id" component={Activation}></Route>
               <Route path="/searchPackages" component={SearchPackage}></Route>
               <Route path="/searchResult" render={(props) => <SearchResult  {...props} />}></Route>

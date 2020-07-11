@@ -47,8 +47,8 @@ class Footer extends Component {
                 <div className="footerul">
                     <a href ="/searchPackages"><li>Book Now</li></a>
                     <a href ="/login"><li>Sign In</li></a>
-                    <a href =""><li>About Us</li></a>
-                    <a href =""><li>FAQ</li></a>
+                    <a href ="/about"><li>About Us</li></a>
+                    <a href ="/faq"><li>FAQ</li></a>
                 </div>
                 </div>
 

@@ -13,19 +13,34 @@ import ComingSoon from './ComingSoon';
 import Testimoni from './Testimoni';
 import HotelStep from'./HotelStep';
 import SearchStep from'./SearchStep';
-
+import hotelBg from '../../assets/Glcmp-1.jpeg';
+import destBg from '../../assets/Baluran.jpg';
 import './TabComponent.css';
 
 class TabComponent extends Component {
     state = {
-        tabIndex: 0
+        tabIndex: 0,
+        imgBackground:hotelBg
+    }
+    changeBackground(){
+        if(this.state.tabIndex!==0){
+            this.setState({imgBackground:hotelBg})
+        }
+    }
+    handleSelectIndex(tabIndex){
+        this.setState({ tabIndex:tabIndex })
+        if(tabIndex===0){
+            this.setState({imgBackground:hotelBg})
+        }else{
+            this.setState({imgBackground:destBg})
+        }
     }
     render() {
         return (
-            <div>
-                <Tabs className="tabs"
+            <div >
+                <Tabs className="tabs" style={{background: `radial-gradient(rgba(0,0,0,0), rgba(0,0,0,2)),url(" ${this.state.imgBackground} ") center center/cover` }}
                     selectedIndex={this.state.tabIndex}
-                    onSelect={tabIndex => this.setState({ tabIndex })}>
+                    onSelect={tabIndex => this.handleSelectIndex(tabIndex)}>
                     <TabList className="tabs-container">
                         <Tab className={`${this.state.tabIndex === 0 ? 'tab-selected active' : null}`}>
                             <TabPopDestination className="tabs-box"/>

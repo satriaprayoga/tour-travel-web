@@ -12,7 +12,7 @@
     "formik": "^2.1.4",
     "formik-wizard": "^3.1.2",
     "jwt-decode": "^2.2.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "qs": "^6.9.4",
     "react": "^16.13.1",
     "react-albus": "^2.0.0",
